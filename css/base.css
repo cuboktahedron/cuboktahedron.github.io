@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+
+header .jumbotron {
+  background-position: center center;
+  background-size: cover;
+  background: linear-gradient(#800000, black);
+  color: white;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+  color: white;
+  text-decoration: none;
+}
+
+header .jumbotron p {
+  padding-left: 1em;
+}
+
+footer {
+  border-top: solid 1px #222;
+  margin: auto 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.main-contents h1 {
+  border: solid green;
+  border-width: 0 0 1px 15px;
+  padding-left: 15px;
+}
+
+.main-contents h2 {
+  border-bottom: solid 2px green;
+}
+

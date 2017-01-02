@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pll on </title>
+    <link>http://cuboktahedron.github.io/tags/pll/index.xml</link>
+    <description>Recent content in Pll on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <atom:link href="http://cuboktahedron.github.io/tags/pll/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PLL手順</title>
+      <link>http://cuboktahedron.github.io/rubiks_cube/own_pll_patterns/</link>
+      <pubDate>Sun, 01 Jan 2017 21:18:17 +0900</pubDate>
+      
+      <guid>http://cuboktahedron.github.io/rubiks_cube/own_pll_patterns/</guid>
+      <description>&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/01a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n1/U-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;L&#39;UL&#39;U&#39;L&#39;U&#39;L&#39;ULUL2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/02a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n2/U-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;RU&#39;RURURU&#39;R&#39;U&#39;R2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/03a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n3/A-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;(r&#39;)RU&#39;RD2R&#39;URD2R2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/04a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n4/A-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;2(r)U2R&#39;D&#39;RU&#39;2(f&#39;)U&#39;RU&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/05a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n5/Z-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;UR&#39;U&#39;RU&#39;RURU&#39;R&#39;URUR2U&#39;R&#39;U&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/06a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n6/H-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;M&#39;2UM&#39;2U2M&#39;2UM&#39;2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/07a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n7/E-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;(r&#39;)RU&#39;R&#39;DRUR&#39;D2L&#39;ULUw(u&#39;)L&#39;U&#39;L&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/08a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n8/T-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;RUR&#39;F&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/09a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n9/V-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;UR&#39;U&#39;(u)(r2)R&#39;UR&#39;U&#39;R2(u)(r)R&#39;U&#39;RUR&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/10a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n10/F-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;U&#39;R&#39;URU&#39;R&#39;2F&#39;(f)R&#39;FRD(f&#39;)(r)UR&#39;U&#39;R2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/11a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n11/R-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;U2RU&#39;2R&#39;FRUR&#39;U&#39;R&#39;FR2U&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/12a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n12/R-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;F&#39;R&#39;U&#39;RF&#39;R&#39;U(u&#39;)R&#39;U&#39;R&#39;URBR2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/13a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n13/J-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;RUR&#39;F&#39;RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/14a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n14/J-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;U&#39;RBR&#39;U&#39;RU(r&#39;)RU&#39;R&#39;2FRF&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/15a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n15/Y-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;(r&#39;)R&#39;2FwR2U&#39;RU(r&#39;)RU&#39;(u)(r)R&#39;UFU&#39;R&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/16a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n16/G-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;(r&#39;)(u&#39;)URU&#39;(u)(r)R2Uw&#39;RU&#39;R&#39;UR&#39;UwR2&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/17a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n17/G-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R2Uw&#39;RU&#39;RUR&#39;UwR&#39;2(u)RU&#39;R&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/18a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n18/G-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;Rw2U(r&#39;)(u)U&#39;RU&#39;R&#39;URw&#39;U2B&#39;RB&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/19a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n19/G-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;U&#39;(u)FR2UwR&#39;URU&#39;RUw&#39;2R&#39;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/20a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n20/N-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;(f)U&#39;RD&#39;R2UR&#39;DU&#39;RD&#39;R2UR&#39;DR&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;http://cuboktahedron.github.io/rubiks_cube/img/pll/21a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;n21/N-perm&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;LU&#39;RU&#39;2L&#39;UR&#39;LU&#39;RU&#39;2L&#39;UR&#39;U&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(&#39;.pattern p.steps&#39;).each(function() {
+    var $this = $(this);
+    var pattern = $(this).text();
+    var r = /[UDRLFB]w?&#39;?2?|[MSE]&#39;?2?|\([ruf]&#39;?2?\)/ig
+
+    $this.text(&#39;&#39;);
+    while ((m = r.exec(pattern)) != null) {
+      $(this).append(&#39;&lt;span&gt;&#39; + m[0] + &#39;&lt;/span&gt;&#39;);
+    }
+  });
+&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
