@@ -5,8 +5,7 @@ body {
 }
 
 header .jumbotron {
-  background-position: center center;
-  background-size: cover;
+  background: #800000;
   background: linear-gradient(#800000, black);
   color: white;
 }
