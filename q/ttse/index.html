@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="description" content="テトリスのテンプレを登録してあります。">
+  <meta name="author" content="cuboktahedron">
+  <title>テトリステンプレ検索</title>
+  <link rel="stylesheet" href="style.min.css" type="text/css">
+</head>
+<body>
+  <script src="/js/tracking.js"></script>
+  <h1>テトリステンプレ検索</h1>
+  <p class="explain">
+  タグ検索はスペース区切りで複数指定できます。-DT砲といった指定でそのタグが付いた譜は除外されます。
+  また「*」は任意の0文字以上の文字列にマッチ、「_」は任意の一文字にマッチするワイルドカードです。
+  </p>
+  <p>※IE8以下では動作しません。</p>
+
+  <div class="search-row clear">
+    <div class="search-label">タグ検索：</div>
+    <div class="search-input">
+      <input id="word" type="text">
+      <input id="search-btn" type="button" value="検索">
+    </div>
+  </div>
+
+  <div id="search-result-area">
+    <p><span id="total-count"></span>&nbsp;&nbsp;<span id="count"></span></p>
+    <ul id="search-result"></ul>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="searcher.min.js"></script>
+</body>
+</html>

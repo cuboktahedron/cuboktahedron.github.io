@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ぷよ譜検索</title>
+  <link rel="stylesheet" href="css/lib/pikaday.css">
+  <style type="text/css">
+    body {
+      background: #ddd;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    input {
+      margin: 0
+    }
+
+    .explain {
+      width: 720px;
+    }
+
+    .search-row {
+      padding: 2px 0;
+      width: 640px;
+      line-height: 24px;
+    }
+
+    .search-label {
+      text-align: right;
+      width: 100px;
+      float: left;
+    }
+
+    #word {
+      width: 70%;
+    }
+
+    #search-result-area {
+      margin-left: 32px;
+    }
+
+    #search-result {
+      height: 500px;
+      overflow-y: auto;
+      padding-left: 4px;
+    }
+
+    #search-result li {
+      clear: both;
+      float: left;
+      list-style-type: none;
+      margin: 2px;
+      padding-left: 0;
+      text-decoration: none;
+    }
+
+    div.link-block {
+      float: left;
+      margin-right: 10px;
+      text-weight: bold;
+    }
+
+    div.tag {
+      background: #ccffff;
+      border-radius: 8px;
+      float: left;
+      margin-left: 5px;
+      padding: 3px;
+      font-size: 75%;
+    }
+
+    div.date {
+      float: left;
+      font-size: 75%;
+      margin-left: 10px;
+      padding: 3px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+  <script src="/js/tracking.js"></script>
+  <h1>ぷよ譜検索</h1>
+  <p class="explain">
+  16手までの手順を練習するためのぷよ譜が登録されています。
+  タグ検索はスペース区切りで複数指定できます。-GTRといった指定でそのタグが付いた譜は除外されます。
+  また、*GTRといった指定でGTR、新GTR、不機嫌GTR等がヒットします。
+  </p>
+  <p>※IE8以下では動作しません。</p>
+  <div class="search-row">
+    <div class="search-label">日付：</div>
+    <div class="search-input">
+      <input id="fromDate" class="datepicker" size="12" type="text">
+      &nbsp;～&nbsp;
+      <input id="toDate" class="datepicker" size="12" type="text">
+    </div>
+  </div>
+  <div class="search-row clear">
+    <div class="search-label">タグ検索：</div>
+    <div class="search-input">
+      <input id="word" type="text">
+      <input id="search-btn" type="button" value="検索">
+    </div>
+  </div>
+
+  <div id="search-result-area">
+    <p><span id="total-count"></span>&nbsp;&nbsp;<span id="count"></span></p>
+    <ul id="search-result"></ul>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/lib/moment.min.js"></script>
+  <script src="js/lib/pikaday.js"></script>
+  <script src="js/lib/pikaday.jquery.js"></script>
+  <script src="js/data.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+        // カレンダの設定
+        $('.datepicker').pikaday({
+            firstDay: 0,
+            format: 'YYYY/MM/DD',
+            i18n: {
+              previousMonth: '先月',
+              nextMonth: '翌月',
+              months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+              weekdays: ['日', '月', '火', '水', '木', '金', '土'],
+              weekdaysShort: ['日', '月', '火', '水', '木', '金', '土'],
+            },
+            minDate: new Date('1991-00-01'),
+            maxDate: new Date('2020-12-31'),
+            showMonthAfterYear: true,
+            yearRange: [1991,2024]
+        });
+
+        // 各テキストボックスのEnter押下で検索押下のイベント登録
+        $('input[type="text"]').keypress(function(e) {
+            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                $('#search-btn').click();
+            }
+        });
+
+        $('#total-count').text('登録件数：' + records.length + '件');
+
+        // 検索ボタン押下処理
+        $('#search-btn').click(function() {
+            var $searchResult = $('#search-result').empty();
+            var searchResult = search();
+
+            $.each(searchResult, function(i, record) {
+                var recordId = ('000000000000' + record.id).slice(-10);
+                var tags = "";
+                $.each(record.tags, function(i, tag) {
+                    tags += ('<div class="tag">' + tag + '</div>');
+                });
+                $searchResult.append('<li><div class="link-block"><a href="http://www.puyop.com/s/' + record.record + '" target="_blank">' + recordId + '</a></div><div class="date">' + record.date + '</div>' + tags + '</li>');
+            });
+            $('#count').text('マッチ件数：' + searchResult.length + '件');
+        });
+
+        var search = function() {
+            var escapeRegExpExceptForAstarisk = function(str) {
+                return str.replace(/([.+?^=!:${}()|[\]\/\\])/g, "\\$1");
+            };
+
+            var isTagMatch = function(searchTag, tags) {
+                for(var i = 0, len = tags.length; i < len; i++) {
+                    if(tags[i].match(searchTag)) {
+                        return true;
+                    }
+                };
+
+                return false;
+            };
+
+            var from = $('#fromDate').val();
+            var to = $('#toDate').val();
+            var word = $('#word').val();
+            word = word.replace(new RegExp("　", "g"), ' ');
+            tags = word.split(' ');
+
+            // 条件に含めるタグ配列生成
+            var plusTags = tags.filter(function(tag) {
+                if (!tag) {
+                    return false;
+                }
+                return tag.charAt(0) !== '-';
+            });
+            plusTags = plusTags.map(function(tag) {
+                var pattern = escapeRegExpExceptForAstarisk(tag).replace(/\*/g, '.*');
+                return new RegExp('^' + pattern + '$', 'i');
+            });
+
+            // 条件から除外するタグ配列作成
+            var minusTags = tags.filter(function(tag) {
+                if (!tag) {
+                    return false;
+                }
+                return tag.charAt(0) === '-';
+            });
+            minusTags = minusTags.map(function(tag) {
+                tag = tag.substring(1);
+                var pattern = escapeRegExpExceptForAstarisk(tag).replace(/\*/g, '.*');
+                return new RegExp('^' + pattern + '$', 'i');
+            });
+
+            return records.filter(function(record) {
+                // 日時の判定
+                var recordDate = moment(record.date, "YYYY-MM-DD");
+                var fromDate = moment(from, "YYYY-MM-DD");
+                if (fromDate && fromDate.isValid()) {
+                    if (fromDate.isAfter(recordDate)) {
+                        return false;
+                    }
+                }
+
+                var toDate = moment(to, "YYYY-MM-DD");
+                if (toDate && toDate.isValid()) {
+                    if (toDate.isBefore(recordDate)) {
+                        return false;
+                    }
+                }
+
+                var tags = record.tags;
+
+                // タグの判定
+                var i;
+                var len;
+                for(i = 0, len = plusTags.length; i < len; i++) {
+                    if (!isTagMatch(plusTags[i], tags)) {
+                        return false;
+                    }
+                }
+
+                for(i = 0, len = minusTags.length; i < len; i++) {
+                    if (isTagMatch(minusTags[i], tags)) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+        };
+    });
+</script>
+</body>
+</html>

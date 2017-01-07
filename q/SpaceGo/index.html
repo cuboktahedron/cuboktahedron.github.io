@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>宇宙囲碁／SpaceGo</title>
+  <script src="/js/tracking.js"></script>
+  <link rel="stylesheet" href="/q/SpaceGo/lib/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/q/SpaceGo/lib/css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="/q/SpaceGo/css/styles.css"/>
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <h1>宇宙囲碁／SpaceGo</h1>
+  </div>
+  <div class="container battle">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="wrapper-board">
+          <canvas id="board" width="748" height="748"></canvas>
+          <canvas id="back-board" width="748" height="748"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/q/SpaceGo/lib/js/jquery.min.js"></script>
+  <script src="/q/SpaceGo/lib/js/bootstrap.min.js"></script>
+  <script src="/q/SpaceGo/lib/js/require.js"></script>
+  <script src="/q/SpaceGo/js/bundle.js"></script>
+  <script>
+    require.config({
+      paths: {
+        lib: '/q/SpaceGo/lib/js'
+      }
+    });
+
+    require(['app/client/main'], function(main) {
+      new main().start();
+    });
+  </script>
+</body>
+</html>
