@@ -4,7 +4,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta charset="utf-8" />
       <meta name="author" content="cuboktahedron"/>
-      <title>Rubiks_cubes</title>
+      <title>OLL手順(別回し手順)</title>
       <script src="https://cuboktahedron.github.io//js/tracking.js"></script>
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/reset.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
@@ -17,7 +17,7 @@
               integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
               crossorigin="anonymous"></script></head>
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/base.css" >
-      <link rel="stylesheet" href="https://cuboktahedron.github.io///css/" >
+      <link rel="stylesheet" href="https://cuboktahedron.github.io//rubiks_cube/css/own_oll_patterns.css" >
   <body>
 
 
@@ -33,21 +33,30 @@
 
 <div class="container">
   <article class="main-contents col-sm-9">
-    <h2>OLL</h2>
-    <br>
-    <a href="./own_oll_patterns"><h3>手順</h3></a>
-    <p>
-      自分が使っているOLLの回し方をまとめています。(24/57)  
-    </p>
-    <br>
-    <h2>PLL</h2>
-    <a href="./own_pll_patterns"><h3>手順</h3></a>
-    <p>
-      自分が使っているPLLの回し方をまとめています。(21/21)  
-    </p>
-    <br>
+    <div class="pattern">
+  <div class="lc"><img class="type-c" src="/rubiks_cube/img/oll/25a.png"></div><div class="rc"><p>25c</p><p class="steps">RL'UR'U'LURU'R'</p></div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+<script>
+  $('.pattern p.steps').each(function() {
+    var $this = $(this);
+    var pattern = $(this).text();
+    var r = /[UDRLFB]w?'?2?|[MSE]'?2?|\([ruf]'?2?\)/ig
+
+    $this.text('');
+    while ((m = r.exec(pattern)) != null) {
+      $(this).append('<span>' + m[0] + '</span>');
+    }
+  });
+</script>
+
   </article>
-  <nav class="sidemenu col-sm-3">
+  <article class="sidemenu col-sm-3">
     <div>タグ一覧</div>
 <ul class="tags">
   
@@ -77,7 +86,7 @@
   
 </ul>
 
-  </nav>
+  </article>
 </div>
 
 <footer>
