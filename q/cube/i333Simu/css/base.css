@@ -1,0 +1,67 @@
+body {
+  font-family: Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+
+#stage canvas {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+#velocity {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 160px;
+}
+
+#velocity div {
+  float: left;
+  padding: 2px;
+  top: -1px;
+}
+
+.velocity-changer {
+  background-color: black;
+  border: solid #d0d0d0 2px;
+  border-radius: 6px;
+  color: white;
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-right: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 42px;
+}
+
+.velocity-changer:hover {
+  background-color: white;
+  border: solid black 2px;
+  color: black;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: white;
+  border: solid black 2px;
+  color: black;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+

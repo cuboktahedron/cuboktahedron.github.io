@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+    <div id="lc">
+      <div id="stage"></div><br>
+      <input id="txt-scramble" type="text"><button id="btn-scramble">スクランブル</button>
+    </div>
+    <div id="rc">
+      <button id="btn-create-image">画像生成</button>
+      <button id="btn-home">ホーム</button>
+      <button id="btn-init">初期化</button><br>
+      x: <input id="txt-camera-x" class="param" type="text"><br>
+      y: <input id="txt-camera-y" class="param" type="text"><br>
+      z: <input id="txt-camera-z" class="param" type="text"><br>
+      <div class="rotation-buttons cf">
+        <a id="btn-U"  class="rotation" data-rot="U">U</a>
+        <a id="btn-UU" class="rotation" data-rot="U'">U'</a>
+        <a id="btn-Uw" class="rotation" data-rot="Uw">Uw</a>
+        <a id="btn-UwUw" class="rotation" data-rot="Uw'">Uw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-D"  class="rotation" data-rot="D">D</a>
+        <a id="btn-DD" class="rotation" data-rot="D'">D'</a>
+        <a id="btn-Dw" class="rotation" data-rot="Dw">Dw</a>
+        <a id="btn-DwDw" class="rotation" data-rot="Dw'">Dw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-R"  class="rotation" data-rot="R">R</a>
+        <a id="btn-RR" class="rotation" data-rot="R'">R'</a>
+        <a id="btn-Rw" class="rotation" data-rot="Rw">Rw</a>
+        <a id="btn-RwRw" class="rotation" data-rot="Rw'">Rw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-L"  class="rotation" data-rot="L">L</a>
+        <a id="btn-LL" class="rotation" data-rot="L'">L'</a>
+        <a id="btn-Lw" class="rotation" data-rot="Lw">Lw</a>
+        <a id="btn-LwLw" class="rotation" data-rot="Lw'">Lw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-F"  class="rotation" data-rot="F">F</a>
+        <a id="btn-FF" class="rotation" data-rot="F'">F'</a>
+        <a id="btn-Fw" class="rotation" data-rot="Fw">Fw</a>
+        <a id="btn-FwFw" class="rotation" data-rot="Fw'">Fw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-B"  class="rotation" data-rot="B">B</a>
+        <a id="btn-BB" class="rotation" data-rot="B'">B'</a>
+        <a id="btn-Bw" class="rotation" data-rot="Bw">Bw</a>
+        <a id="btn-BwBw" class="rotation" data-rot="Bw'">Bw'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-E"  class="rotation" data-rot="E">E</a>
+        <a id="btn-EE" class="rotation" data-rot="E'">E'</a>
+        <a id="btn-M"  class="rotation" data-rot="M">M</a>
+        <a id="btn-MM" class="rotation" data-rot="M'">M'</a>
+        <a id="btn-S"  class="rotation" data-rot="S">S</a>
+        <a id="btn-SS" class="rotation" data-rot="S'">S'</a>
+      </div>
+      <div class="rotation-buttons cf">
+        <a id="btn-x"  class="rotation" data-rot="x">x</a>
+        <a id="btn-xx"  class="rotation" data-rot="x'">x'</a>
+        <a id="btn-y"  class="rotation" data-rot="y">y</a>
+        <a id="btn-yy"  class="rotation" data-rot="y'">y'</a>
+        <a id="btn-z"  class="rotation" data-rot="z">z</a>
+        <a id="btn-zz"  class="rotation" data-rot="z'">z'</a>
+      </div>
+      <div id="velocity">
+        <a id="btn-velocity-up" class="velocity-changer">&lt;</a>
+        <div>
+          <input id="txt-velocity" type="text">
+        </div>
+        <a id="btn-velocity-down" class="velocity-changer">&gt;</a>
+      </div>
+    </div>
+    <div class="cf"></div>
+    <div id="dc">
+      <img id="img-capture">
+    </div>
+
+    <div>
+      <iframe src="/q/cube/i333Simu/?zoom=200&rotation=RUR" width="640" height="700" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border:none;"></iframe>
+    </div>
+    <script src="/q/cube/js/lib/three.min.js"></script>
+    <script src="/q/cube/js/lib/OrbitControls.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+            crossorigin="anonymous">
+    </script>
+    <script src="/q/cube/js/cube_defs.js"></script>
+    <script src="/q/cube/js/cube.js"></script>
+    <script src="js/view.js"></script>
+  </body>
+</html>

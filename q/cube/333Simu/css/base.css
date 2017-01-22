@@ -1,0 +1,88 @@
+body {
+  font-family: Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  margin: 16px;
+}
+
+#lc {
+  float: left;
+}
+
+#rc {
+  float: left;
+  margin-left: 8px;
+}
+
+#dc {
+  margin-top: 8px;
+}
+
+#txt-scramble {
+  width: 100%;
+}
+
+.rotation {
+  background-color: black;
+  border: solid #d0d0d0 2px;
+  border-radius: 6px;
+  color: white;
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 36px;
+}
+
+.rotation:hover {
+  background-color: white;
+  border: solid black 2px;
+  color: black;
+  cursor: pointer;
+}
+
+#velocity div {
+  float: left;
+  padding: 2px;
+  top: -1px;
+}
+
+#txt-velocity {
+  text-align: center;
+  width: 32px;
+}
+
+.velocity-changer {
+  background-color: black;
+  border: solid #d0d0d0 2px;
+  border-radius: 6px;
+  color: white;
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 36px;
+}
+
+.velocity-changer:hover {
+  background-color: white;
+  border: solid black 2px;
+  color: black;
+  cursor: pointer;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
