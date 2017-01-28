@@ -24,6 +24,7 @@ $(function() {
       x: -50,
       y: 30,
       z: -50,
+      zoom: 100,
     }, params);
   };
 
@@ -102,6 +103,7 @@ $(function() {
 
     velocity = D.initialParams.velocity;
     $('#txt-velocity').val(velocity);
+    $('#txt-zoom').val(D.initialParams.zoom);
   };
 
   var resetCubes = function() {
@@ -272,6 +274,12 @@ $(function() {
     C.cube.setup(scramble, rotate);
   });
 
+  $('#btn-reverse').click(function() {
+    var scramble = $('#txt-scramble').val();
+    var reverseScramble = C.cube.reverseScrambleMarks(scramble);
+    $('#txt-reverse-scramble').val(reverseScramble.join(''));
+  });
+
   $('#btn-init').click(function() {
     setup();
   });
@@ -307,6 +315,106 @@ $(function() {
     }
     velocity = v;
     $('#txt-velocity').val(v);
+  });
+
+  var reverseSetup = function(scramble) {
+    var r = /[UDRLFB]w'?2?|[xyz]'?2?|\(([urf]'?2?)\)/g;
+    var mark;
+    var rotTable = [];
+    var m;
+    rotTable["Uw"] = "y";
+    rotTable["Dw"] = "y'";
+    rotTable["Rw"] = "x";
+    rotTable["Lw"] = "x'";
+    rotTable["Fw"] = "z";
+    rotTable["Bw"] = "z'";
+    rotTable["u"]  = "y";
+    rotTable["r"]  = "x";
+    rotTable["f"]  = "z";
+    rotTable["x"]  = rotTable["r"];
+    rotTable["y"]  = rotTable["u"];
+    rotTable["z"]  = rotTable["f"];
+
+    for (var mark in rotTable) {
+      if(rotTable[mark].indexOf("'") !== -1) {
+        rotTable[mark + "'"] = rotTable[mark].replace("'", "");
+      } else {
+        rotTable[mark + "'"] = rotTable[mark] + "'";
+      }
+      rotTable[mark + "2"] = rotTable[mark] + "2";
+      rotTable[mark + "'2"] = rotTable[mark] + "'2";
+    }
+
+    var headSetup = "";
+    while ((m = r.exec(scramble)) != null) {
+      if (m[1] == null) {
+        mark = m[0];
+      } else {
+        mark = m[1];
+      }
+
+      headSetup += rotTable[mark];
+      console.log(headSetup);
+    }
+
+    return headSetup;
+  };
+
+  $('#btn-iframe-url').click(function() {
+    var x = $('#txt-camera-x').val();
+    var y = $('#txt-camera-y').val();
+    var z = $('#txt-camera-z').val();
+    var scramble = $('#txt-scramble').val();
+    var reverseScramble = $('#txt-reverse-scramble').val();
+    var velocity = $('#txt-velocity').val();
+    var setupRotation = $('#txt-setup-rotation').val();
+    var setupRotation2 = $('#txt-setup-rotation2').val();
+    var setup = setupRotation + D.initialParams.setup + reverseSetup(scramble) + reverseScramble + setupRotation2;
+    var zoom = $('#txt-zoom').val();
+
+    var r = /[UDRLFB]w?'?2?|[xyz]'?2?|\([urf]'?2?\)/g;
+
+    var param = {};
+    if (x != -50) {
+      param.x = x;
+    }
+
+    if (y != 30) {
+      param.y = y;
+    }
+
+    if (z != -50) {
+      param.z = z;
+    }
+
+    if (setup != '') {
+      param.setup = setup;
+    }
+
+    if (scramble != '') {
+      param.rotation = scramble;
+    }
+
+    if (velocity != 30) {
+      param.velocity = velocity;
+    }
+
+    if (zoom != 100) {
+      param.zoom = zoom;
+    }
+
+    var urlParams = [];
+    for (var p in param) {
+      urlParams.push('' + p + '=' + param[p]);
+    }
+
+    var width = Math.round((zoom / 100) * 320);
+    var height = width + 64;
+    var urlWithoutParam = location.href.replace(/\?.*$/,'').replace('333Simu', 'i333Simu');
+    var url = urlWithoutParam + '?' + urlParams.join('&');
+    var tag = '<iframe src="' + url + '" width="' + width + '" height="' + height + '" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border:none;"></iframe>';
+    $('#txt-iframe-url').val(tag).select();
+    $('#iframe').html(tag);
   });
 });
 
