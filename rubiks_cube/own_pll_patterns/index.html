@@ -9,13 +9,18 @@
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/reset.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css" />
-      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-              integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
               crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
               integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
               crossorigin="anonymous"></script></head>
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/css/iziModal.css" integrity="sha256-m/nnXscwkcMbAFsUOys9WKr+MzlZz3q7EcJpkOxItaU=" crossorigin="anonymous" />
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/js/iziModal.js" integrity="sha256-rPSLT4QVhivrxPwK7xeqPLVWDDtc2YHkZHVxs1I6u9Y=" crossorigin="anonymous"></script>
+      
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/base.css" >
       <link rel="stylesheet" href="https://cuboktahedron.github.io//rubiks_cube/css/own_pll_patterns.css" >
   <body>
@@ -97,18 +102,7 @@
   <div class="lc"><img src="/rubiks_cube/img/pll/21.png"></div><div class="rc"><p>n21/N-perm</p><p class="steps">LU'RU'2L'UR'LU'RU'2L'UR'U</p></div>
 </div>
 
-<script>
-  $('.pattern p.steps').each(function() {
-    var $this = $(this);
-    var pattern = $(this).text();
-    var r = /[UDRLFB]w?'?2?|[MSE]'?2?|\([ruf]'?2?\)/ig
-
-    $this.text('');
-    while ((m = r.exec(pattern)) != null) {
-      $(this).append('<span>' + m[0] + '</span>');
-    }
-  });
-</script>
+<script src="/rubiks_cube/js/patterns.js"></script>
 
   </article>
   <article class="sidemenu col-sm-3">

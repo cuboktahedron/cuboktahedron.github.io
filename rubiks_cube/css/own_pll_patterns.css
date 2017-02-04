@@ -20,6 +20,7 @@
 
 .pattern img {
   background-color: grey;
+  cursor: pointer;
   padding: 6px;
   vertical-align: middle;
 }
