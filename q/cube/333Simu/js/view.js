@@ -99,6 +99,17 @@ $(function() {
     setTimeout(function() {
       C.cube.setup(D.initialParams.setup, rotateForSetup);
       setupping = false;
+
+      var x, y, z;
+      var cube;
+      for (x = 0; x < 3; x++) {
+        for (y = 0; y < 3; y++) {
+          for (z = 0; z < 3; z++) {
+            cube = C.cube.cubes[x][y][z];
+            cube.visible = true;
+          }
+        }
+      }
     }, 100);
 
     velocity = D.initialParams.velocity;
@@ -148,6 +159,7 @@ $(function() {
 
             D.scene.add(cube);
             cubes[x][y][z] = cube;
+            cube.visible = false;
           }
         }
     }
