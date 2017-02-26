@@ -11,7 +11,14 @@ $(function() {
   });
 
   $('.pattern img').click(function() {
-    var rotation = $(this).closest('.pattern').find('.steps').text();
+    var $type = $(this).closest('.type');
+    var rotation;
+    // TODO: ここはレイアウトの移行が完了留守まで暫定的な対処
+    if ($type.length === 0) {
+      rotation = $(this).closest('.pattern').find('.steps').text();
+    } else {
+      rotation = $type.find('.steps').text();
+    }
     var params = [
       'setup=' + setupRotation() + reverseSetup(rotation) + reverseScrambleMarks(rotation),
       'rotation=' + rotation,

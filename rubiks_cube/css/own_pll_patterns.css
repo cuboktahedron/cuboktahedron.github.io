@@ -22,7 +22,6 @@
   background-color: grey;
   cursor: pointer;
   padding: 6px;
-  vertical-align: middle;
 }
 
 .pattern p {
@@ -41,3 +40,25 @@
   page-break-inside: avoid;
 }
 
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.type-b {
+  margin: 4px 0;
+}
+
+.type-b img {
+  transform: rotateZ(90deg);
+  -ms-transform: rotate(90deg);
+}
