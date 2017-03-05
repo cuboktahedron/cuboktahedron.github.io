@@ -9,6 +9,143 @@
     <atom:link href="https://cuboktahedron.github.io/tags/pll/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>PLL2面判断</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/pll_2face/</link>
+      <pubDate>Sat, 04 Mar 2017 13:20:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/pll_2face/</guid>
+      <description>&lt;p&gt;全PLL、全方向、全配色の組み合わせです。&lt;/p&gt;
+
+&lt;div id=&#34;perms&#34;&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n1/U-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/01.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n2/U-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/02.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n3/A-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/03.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n4/A-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/04.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n5/Z-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/05.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n6/H-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/06.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n7/E-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/07.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n8/T-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/08.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n9/V-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/09.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n10/F-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/10.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n11/R-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/11.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n12/R-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/12.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n13/J-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/13.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n14/J-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/14.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n15/Y-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/15.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n16/G-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/16.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n17/G-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/17.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n18/G-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/18.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n19/G-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/19.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n20/N-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/20.png&#34;&gt;
+  &lt;/div&gt;
+  &lt;a class=&#34;nav-perm&#34;&gt;n21/N-perm&lt;/a&gt;
+  &lt;div class=&#34;n-pattern&#34;&gt;
+    &lt;img class=&#34;img-fluid&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/2face/21.png&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(function() {
+  $(&#39;.nav-perm&#39;).on(&#39;click&#39;, function() {
+    var that = this;
+    $(this).next().slideToggle(200, function() {
+      $(&#34;body&#34;).animate({
+        scrollTop: $(that).offset().top
+      }, 200);
+    });
+  });
+});
+
+&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PLL2面判断</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</link>
+      <pubDate>Sat, 04 Mar 2017 13:20:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</guid>
+      <description>&lt;div id=&#34;hidden-parts&#34;&gt;
+  &lt;div id=&#34;stage&#34;&gt;&lt;/div&gt;&lt;br&gt;
+  &lt;button id=&#34;btn-create-image&#34;&gt;画像生成&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;perms&#34;&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/lib/three.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube_defs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/pll_2face.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PLL手順</title>
       <link>https://cuboktahedron.github.io/rubiks_cube/own_pll_patterns/</link>
       <pubDate>Sun, 01 Jan 2017 21:18:17 +0900</pubDate>
