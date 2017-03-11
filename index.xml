@@ -6,8 +6,34 @@
     <description>Recent content on Ununique.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 04 Mar 2017 13:20:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 11 Mar 2017 14:44:12 +0900</lastBuildDate>
     <atom:link href="https://cuboktahedron.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PLL2面判断練習</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</link>
+      <pubDate>Sat, 11 Mar 2017 14:44:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</guid>
+      <description>&lt;div id=&#34;hidden-parts&#34;&gt;
+  &lt;div id=&#34;stage&#34;&gt;&lt;/div&gt;&lt;br&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;perm&#34;&gt;
+  &lt;img&gt;
+  &lt;div&gt;
+    &lt;label&gt;&lt;input id=&#34;chk-answer-visible&#34; type=&#34;checkbox&#34;&gt;&amp;nbsp;答え表示&lt;/label&gt;
+    &lt;div&gt;&lt;h2 id=&#34;desc-header&#34;&gt;&lt;/h2&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/lib/three.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube_defs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/pll_2face_practice.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>PLL2面判断</title>
@@ -115,32 +141,6 @@ $(function() {
     });
   });
 });
-
-&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PLL2面判断</title>
-      <link>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</link>
-      <pubDate>Sat, 04 Mar 2017 13:20:12 +0900</pubDate>
-      
-      <guid>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</guid>
-      <description>&lt;div id=&#34;hidden-parts&#34;&gt;
-  &lt;div id=&#34;stage&#34;&gt;&lt;/div&gt;&lt;br&gt;
-  &lt;button id=&#34;btn-create-image&#34;&gt;画像生成&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;perms&#34;&gt;
-&lt;/div&gt;
-
-&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/lib/three.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube_defs.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/pll_2face.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
-
-&lt;script&gt;
 
 &lt;/script&gt;
 </description>

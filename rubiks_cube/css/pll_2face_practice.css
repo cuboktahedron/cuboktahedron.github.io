@@ -1,0 +1,14 @@
+#hidden-parts {
+  display: none;
+}
+
+#perm img {
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin-right: 8px;
+}
+
+#desc-header {
+  display: none;
+}
