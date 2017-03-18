@@ -12,3 +12,40 @@
 #desc-header {
   display: none;
 }
+
+#config {
+  margin-top: 1em;
+}
+
+#config div {
+  float: left;
+}
+
+#config div + div{
+  margin-left: 1em;
+}
+
+#config div p {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+#txt-time-to-answer,
+#txt-time-to-next {
+  margin-bottom: 4px;
+  width: 80px;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}

@@ -19,11 +19,18 @@
   &lt;div id=&#34;stage&#34;&gt;&lt;/div&gt;&lt;br&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;perm&#34;&gt;
+&lt;div id=&#34;perm&#34; class=&#34;cf&#34;&gt;
   &lt;img&gt;
   &lt;div&gt;
-    &lt;label&gt;&lt;input id=&#34;chk-answer-visible&#34; type=&#34;checkbox&#34;&gt;&amp;nbsp;答え表示&lt;/label&gt;
     &lt;div&gt;&lt;h2 id=&#34;desc-header&#34;&gt;&lt;/h2&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;config&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Answer&lt;/p&gt;&lt;input id=&#34;txt-time-to-answer&#34; type=&#34;number&#34; size=&#34;8&#34; value=&#34;5000&#34; step=&#34;10&#34;&gt;ms&lt;br&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p&gt;Next&lt;/p&gt;&lt;input id=&#34;txt-time-to-next&#34; type=&#34;number&#34; size=&#34;8&#34; value=&#34;5000&#34; step=&#34;10&#34;&gt;ms
   &lt;/div&gt;
 &lt;/div&gt;
 

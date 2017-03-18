@@ -232,10 +232,35 @@ $(function() {
       };
     })(i)).then(function() {
       var d = $.Deferred();
+      var timerId;
+      var answerTime = $('#txt-time-to-answer').val();
       $('#perm img').on('click', function() {
+        $('#desc-header').show();
         $(this).off('click');
+        clearTimeout(timerId);
         d.resolve();
       });
+      timerId = setTimeout(function() {
+        $('#desc-header').show();
+        $(this).off('click');
+        d.resolve();
+      }, answerTime);
+      return d.promise();
+    }).then(function() {
+      var d = $.Deferred();
+      var timerId;
+      var nextTime = $('#txt-time-to-next').val();
+      $('#perm img').on('click', function() {
+        $('#desc-header').hide();
+        $(this).off('click');
+        clearTimeout(timerId);
+        d.resolve();
+      });
+      timerId = setTimeout(function() {
+        $('#desc-header').hide();
+        $(this).off('click');
+        d.resolve();
+      }, nextTime);
       return d.promise();
     }).then((function(number) {
       var steps = yturns[j] + rotU[l] + stepss[number] + yturns[k];
@@ -271,12 +296,17 @@ $(function() {
     d.resolve();
   }
 
-  $('#chk-answer-visible').change(function() {
-    if ($(this).prop('checked')) {
-      $('#desc-header').show();
-    } else {
-      $('#desc-header').hide();
+  $('#txt-time-to-answer, #txt-time-to-next').change(function() {
+    var val = $(this).val();
+    if (isNaN(val)) {
+      val = 0;
+    } else if(val <= 0) {
+      val = 0;
+    } else if(val >= 60000) {
+      val = 60000;
     }
+
+    $(this).val(val);
   });
 
   createNext();
