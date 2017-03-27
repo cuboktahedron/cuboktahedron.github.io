@@ -106,6 +106,9 @@ $(function() {
     table["Lw"] = "x'";
     table["Fw"] = "z";
     table["Bw"] = "z'";
+    table["M"]  = "x'";
+    table["S"]  = "z";
+    table["E"]  = "y'";
     table["u"]  = "y";
     table["r"]  = "x";
     table["f"]  = "z";
@@ -135,7 +138,7 @@ $(function() {
    * 基準面が変わってしまっているので補正手順を入れる。
    */
   function reverseSetup(scramble) {
-    var r = /[UDRLFB]w'?2?|[xyz]'?2?|\(([urf]'?2?)\)/g;
+    var r = /[UDRLFB]w'?2?|[xyzMSE]'?2?|\(([urf]'?2?)\)/g;
     var mark;
     var m;
     var headSetup = "";
