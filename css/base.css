@@ -8,13 +8,34 @@ header .jumbotron {
   background: #800000;
   background: linear-gradient(#800000, black);
   color: white;
+  border-radius: 0;
+}
+
+nav.navbar {
+  background: #cc0000;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  padding: 0 8px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
 }
 
 header a:link,
-header a:visited,
+header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 header a:hover,
 header a:active {
-  color: white;
+  color: #cc0000;
+  background: white;
   text-decoration: none;
 }
 
