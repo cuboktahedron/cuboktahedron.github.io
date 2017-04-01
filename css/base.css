@@ -59,3 +59,17 @@ footer {
 .main-contents h2 {
   border-bottom: solid 2px green;
 }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}

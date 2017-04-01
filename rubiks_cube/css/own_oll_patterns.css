@@ -41,20 +41,6 @@
   page-break-inside: avoid;
 }
 
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
 .type-c {
   margin: 4px 0;
 }
