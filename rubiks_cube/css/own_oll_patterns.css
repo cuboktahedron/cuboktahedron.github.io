@@ -41,8 +41,13 @@
   page-break-inside: avoid;
 }
 
-.type-c {
+.type {
   margin: 4px 0;
+}
+
+.type-d img {
+  transform: rotateZ(270deg);
+  -ms-transform: rotate(270deg);
 }
 
 .type-c img {
