@@ -11,9 +11,21 @@
 }
 
 .n-pattern {
-  background-color: #404040;
-  border: solid 8px white;
   display: none;
   margin: 8px 0;
   max-width: 656px;
+}
+
+.n-pattern img {
+  background-color: #404040;
+  border: solid 8px white;
+}
+
+.n-pattern li {
+  border: solid 2px white;
+  margin: 1em 0 0 1em;
+}
+
+.n-pattern p {
+  margin: 0.5em 0 0 1em;
 }
