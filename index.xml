@@ -58,8 +58,7 @@
       &lt;li&gt;
         &lt;h3&gt;n1-1&lt;/h3&gt;
         &lt;p&gt;形からU-perm, Z-perm, H-permのいずれかであることがわかる。&lt;p&gt;
-        &lt;p&gt;エッジの色がR -&gt; F、F -&gt; LorBにスライドすることからU-perm(n1)であることが確定。&lt;p&gt;
-        &lt;p&gt;エッジとコーナーの色関係からRFL面でスライドすることが確定。&lt;p&gt;
+        &lt;p&gt;エッジの色がR -&gt; F -&gt; LにスライドすることからU-perm(n1)であることが確定。&lt;p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-2&lt;/h3&gt;
@@ -69,8 +68,7 @@
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-4&lt;/h3&gt;
-        &lt;p&gt;n1-1と同様にU-perm(n1)であることが確定。&lt;p&gt;
-        &lt;p&gt;エッジとコーナーの色関係からRFB面でスライドすることが確定。&lt;p&gt;
+        &lt;p&gt;n1-1と同様にR -&gt; F -&gt; BでスライドするU-perm(n1)であることが確定。&lt;p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
@@ -81,8 +79,7 @@
       &lt;li&gt;
         &lt;h3&gt;n2-1&lt;/h3&gt;
         &lt;p&gt;形からU-perm, Z-perm, H-permのいずれかであることがわかる。&lt;p&gt;
-        &lt;p&gt;エッジの色がF -&gt; R、R -&gt; LorBにスライドすることからU-perm(n2)であることが確定。&lt;p&gt;
-        &lt;p&gt;エッジとコーナーの色関係からRFL面でスライドすることが確定。&lt;p&gt;
+        &lt;p&gt;エッジの色がF -&gt; R- &gt; LにスライドすることからU-perm(n2)であることが確定。&lt;p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n2-2&lt;/h3&gt;
@@ -92,8 +89,7 @@
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n2-4&lt;/h3&gt;
-        &lt;p&gt;n2-1と同様にU-perm(n2)であることが確定。&lt;p&gt;
-        &lt;p&gt;エッジとコーナーの色関係からRFB面でスライドすることが確定。&lt;p&gt;
+        &lt;p&gt;n2-1と同様にR -&gt; F -&gt; BでスライドU-perm(n2)であることが確定。&lt;p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
@@ -118,7 +114,7 @@
         &lt;h3&gt;n5-2&lt;/h3&gt;
         &lt;p&gt;形からU-perm, Z-perm, H-permのいずれかであることがわかる。&lt;p&gt;
         &lt;p&gt;F-R面のエッジがスライドする関係ではないためA-permは除外。&lt;p&gt;
-        &lt;p&gt;H-permは２面ともエッジの間にそれぞれの反対色がくるため除外。&lt;p&gt;
+        &lt;p&gt;H-permは2面ともエッジの間にそれぞれの反対色がくるため除外。&lt;p&gt;
         &lt;p&gt;なのでZ-perm(n5)であることが確定。&lt;p&gt;
       &lt;/li&gt;
       &lt;li&gt;
