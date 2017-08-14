@@ -53,13 +53,13 @@
         <h3>n1-1</h3>
         <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
         <p>E(r) = C(fr), E(f) != C(rf) => { U(n1-{1, 4}) }<p>
-        <p>E(f) = Next(C(fr)) => { U(n1-1) }<p>
+        <p>E(f) = Invert(C(rf)) => { U(n1-1) }<p>
         <p><p>
       </li>
       <li>
         <h3>n1-2</h3>
         <p>Form(F) = (a:b:a), Form(R) = (a:a:a) => { U }<p>
-        <p>E(f) = Next(C(rf)) => { U(n1-2) }
+        <p>E(f) = Invert(C(rf)) => { U(n1-2) }
       </li>
       <li>
         <h3>n1-3</h3>
@@ -70,7 +70,7 @@
         <h3>n1-4</h3>
         <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
         <p>E(r) = C(fr), E(f) != C(rf) => { U(n1-{1, 4}) }<p>
-        <p>E(f) != Next(C(fr)) => { U(n1-4) }<p>
+        <p>E(f) = Invert(C(fr)) => { U(n1-4) }<p>
       </li>
     </ul>
   </div>
@@ -80,22 +80,25 @@
     <ul>
       <li>
         <h3>n2-1</h3>
-        <p>形からU-perm, Z-perm, H-permのいずれかであることがわかる。<p>
-        <p>エッジの色がF -> R- > LにスライドすることからU-perm(n2)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(f) = C(rf), E(r) != C(fr) => { U(n2-{1, 4}) }<p>
+        <p>E(r) = Invert(C(rf)) => { U(n2-1) }<p>
       </li>
       <li>
         <h3>n2-2</h3>
-        <p>形からU-permであることがわかる。<p>
-        <p>エッジの色がF -> BにスライドすることからU-perm(n2)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:a:a) => { U }<p>
+        <p>E(f) = Invert(C(rf)) => { U(n2-2) }
       </li>
       <li>
         <h3>n2-3</h3>
-        <p>形からU-permであることがわかる。<p>
-        <p>エッジの色がR -> BにスライドすることからU-perm(n2)であることが確定。<p>
+        <p>Form(F) = (a:a:a), Form(R) = (a:b:a) => { U }<p>
+        <p>E(r) == Invert(C(fr)) => { U(n2-3) }
       </li>
       <li>
         <h3>n2-4</h3>
-        <p>n2-1と同様にR -> F -> BでスライドU-perm(n2)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(f) = C(rf), E(r) != C(fr) => { U(n2-{1, 4}) }<p>
+        <p>E(r) = Invert(C(fr)) => { U(n2-4) }<p>
       </li>
     </ul>
   </div>
@@ -111,15 +114,15 @@
       </li>
       <li>
         <h3>n3-3</h3>
-        <p>形からA-perm, V-permのいずれかであることがわかる。<p>
-        <p>F面、R面の共有していないコーナーの色が同じ色なので、A-permであることが確定。<p>
-        <p>F面が反対色で構成されているので、反時計回り(n3)であることが確定。<p>
+        <p>Form(F) = (a:b:b), Form(R) = (a:a:b) => { A, V }<p>
+        <p>C(fl) = C(rb) => { A }</p>
+        <p>C(fl) = Invert(E(f)) => { A(n3-3) }</p>
       </li>
       <li>
         <h3>n3-4</h3>
-        <p>形からA-perm, G-permのいずれかであることがわかる。<p>
-        <p>エッジは正順になっているので、A-Permであることが確定。<p>
-        <p>コーナとエッジの色関係から反時計回り(n3)であることが確定。<p>
+        <p>Form(F) = (a:a:b), Form(R) = (a:b:a) => { A, G }<p>
+        <p>E(r) = Prev(E(f)) => { A }<p>
+        <p>E(r) = C(fr) => { A(n3-4) }</p>
       </li>
     </ul>
   </div>
@@ -132,15 +135,15 @@
       </li>
       <li>
         <h3>n4-2</h3>
-        <p>形からA-perm, G-permのいずれかであることがわかる。<p>
-        <p>エッジは正順になっているので、A-Permであることが確定。<p>
-        <p>コーナとエッジの色関係から時計回り(n4)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:b) => { A, G }<p>
+        <p>E(f) = Next(E(r)) => { A }<p>
+        <p>E(f) = Prev(C(rf) => { A(n4-2) }</p>
       </li>
       <li>
         <h3>n4-3</h3>
-        <p>形からA-perm, V-permのいずれかであることがわかる。<p>
-        <p>F面、R面の共有していないコーナーの色が同じ色なので、A-permであることが確定。<p>
-        <p>R面が反対色で構成されているので、時計回り(n4)であることが確定。<p>
+        <p>Form(F) = (a:b:b), Form(R) = (a:a:b) => { A, V }<p>
+        <p>C(fl) = C(rb) => { A }</p>
+        <p>C(rb) = Invert(E(r)) => { A(n4-3) }</p>
       </li>
       <li>
         <h3>n4-4</h3>
