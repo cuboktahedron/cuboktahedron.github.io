@@ -56,22 +56,26 @@
     &lt;ul&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-1&lt;/h3&gt;
-        &lt;p&gt;形からU-perm, Z-perm, H-permのいずれかであることがわかる。&lt;p&gt;
-        &lt;p&gt;エッジの色がR -&gt; F -&gt; LにスライドすることからU-perm(n1)であることが確定。&lt;p&gt;
+        &lt;p&gt;Form(F) = (a:b:a), Form(R) = (a:b:a) =&gt; { U, Z, H }&lt;p&gt;
+        &lt;p&gt;E(r) = C(fr), E(f) != C(rf) =&gt; { U(n1-{1, 4}) }&lt;p&gt;
+        &lt;p&gt;E(f) = Next(C(fr)) =&gt; { U(n1-1) }&lt;p&gt;
+        &lt;p&gt;&lt;p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-2&lt;/h3&gt;
-        &lt;p&gt;形からU-permであることがわかる。&lt;p&gt;
-        &lt;p&gt;エッジの色がF -&gt; LにスライドすることからU-perm(n1)であることが確定。&lt;p&gt;
+        &lt;p&gt;Form(F) = (a:b:a), Form(R) = (a:a:a) =&gt; { U }&lt;p&gt;
+        &lt;p&gt;E(f) = Next(C(rf)) =&gt; { U(n1-2) }
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-3&lt;/h3&gt;
-        &lt;p&gt;形からU-permであることがわかる。&lt;p&gt;
-        &lt;p&gt;エッジの色がR -&gt; LにスライドすることからU-perm(n1)であることが確定。&lt;p&gt;
+        &lt;p&gt;Form(F) = (a:a:a), Form(R) = (a:b:a) =&gt; { U }&lt;p&gt;
+        &lt;p&gt;E(r) = Invert(C(rf)) =&gt; { U(n1-3) }
       &lt;/li&gt;
       &lt;li&gt;
         &lt;h3&gt;n1-4&lt;/h3&gt;
-        &lt;p&gt;n1-1と同様にR -&gt; F -&gt; BでスライドするU-perm(n1)であることが確定。&lt;p&gt;
+        &lt;p&gt;Form(F) = (a:b:a), Form(R) = (a:b:a) =&gt; { U, Z, H }&lt;p&gt;
+        &lt;p&gt;E(r) = C(fr), E(f) != C(rf) =&gt; { U(n1-{1, 4}) }&lt;p&gt;
+        &lt;p&gt;E(f) != Next(C(fr)) =&gt; { U(n1-4) }&lt;p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;

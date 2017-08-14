@@ -51,22 +51,26 @@
     <ul>
       <li>
         <h3>n1-1</h3>
-        <p>形からU-perm, Z-perm, H-permのいずれかであることがわかる。<p>
-        <p>エッジの色がR -> F -> LにスライドすることからU-perm(n1)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(r) = C(fr), E(f) != C(rf) => { U(n1-{1, 4}) }<p>
+        <p>E(f) = Next(C(fr)) => { U(n1-1) }<p>
+        <p><p>
       </li>
       <li>
         <h3>n1-2</h3>
-        <p>形からU-permであることがわかる。<p>
-        <p>エッジの色がF -> LにスライドすることからU-perm(n1)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:a:a) => { U }<p>
+        <p>E(f) = Next(C(rf)) => { U(n1-2) }
       </li>
       <li>
         <h3>n1-3</h3>
-        <p>形からU-permであることがわかる。<p>
-        <p>エッジの色がR -> LにスライドすることからU-perm(n1)であることが確定。<p>
+        <p>Form(F) = (a:a:a), Form(R) = (a:b:a) => { U }<p>
+        <p>E(r) = Invert(C(rf)) => { U(n1-3) }
       </li>
       <li>
         <h3>n1-4</h3>
-        <p>n1-1と同様にR -> F -> BでスライドするU-perm(n1)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(r) = C(fr), E(f) != C(rf) => { U(n1-{1, 4}) }<p>
+        <p>E(f) != Next(C(fr)) => { U(n1-4) }<p>
       </li>
     </ul>
   </div>
