@@ -156,23 +156,21 @@
     <ul>
       <li>
         <h3>n5-1</h3>
-        <p>形からU-perm, Z-perm, H-permのいずれかであることがわかる。<p>
-        <p>見えてるエッジ同士が入れ替わる関係にあるためZ-perm(n5)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(r) = C(fr), E(f) = C(rf) => { Z(n5-{1, 3}) }<p>
       </li>
       <li>
         <h3>n5-2</h3>
-        <p>形からU-perm, Z-perm, H-permのいずれかであることがわかる。<p>
-        <p>F-R面のエッジがスライドする関係ではないためA-permは除外。<p>
-        <p>H-permは2面ともエッジにコーナーの反対色がくるため除外。<p>
-        <p>なのでZ-perm(n5)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(r) != C(fr), E(f) != C(rf) => { Z(n5-{2, 4}) }<p>
       </li>
       <li>
         <h3>n5-3</h3>
-        <p>n5-1と同様にZ-perm(n5)であることが確定。<p>
+        <p>see n5-1<p>
       </li>
       <li>
         <h3>n5-4</h3>
-        <p>n5-2と同様にZ-perm(n5)であることが確定。<p>
+        <p>see n5-2<p>
       </li>
     </ul>
   </div>
@@ -182,20 +180,20 @@
     <ul>
       <li>
         <h3>n6-1</h3>
-        <p>形からU-perm, Z-perm, H-permのいずれかであることがわかる。<p>
-        <p>2面ともエッジにコーナーの反対色が来ているためH-Perm(n6)であることが確定。<p>
+        <p>Form(F) = (a:b:a), Form(R) = (a:b:a) => { U, Z, H }<p>
+        <p>E(r) = Invert(C(fr)), E(f) = Invert(C(rf)) => { H(n6-{1, 2, 3, 4}) }<p>
       </li>
       <li>
         <h3>n6-2</h3>
-        <p>n6-1と同様にH-perm(n6)であることが確定。<p>
+        <p>see n6-1<p>
       </li>
       <li>
         <h3>n6-3</h3>
-        <p>n6-1と同様にH-perm(n6)であることが確定。<p>
+        <p>see n6-1<p>
       </li>
       <li>
         <h3>n6-4</h3>
-        <p>n6-1と同様にH-perm(n6)であることが確定。<p>
+        <p>see n6-1<p>
       </li>
     </ul>
   </div>
@@ -205,25 +203,25 @@
     <ul>
       <li>
         <h3>n7-1</h3>
-        <p>形からE-perm, V-perm, F-perm, R-perm, Y-perm, G-permのいずれかであることがわかる。<p>
-        <p>エッジが正順になっているので、E-perm, G-permのいずれかであることがわかる。<p>
-        <p>共通していないコーナーが正順になっているのでE-permであることが確定。<p>
-        <p>共通のコーナーと各エッジの色から共通のコーナーはR面奥に移動することがわかる。<p>
+        <p>Form(F) = (a:b:c), Form(R) = (a:b:c) => { E, F, G, R, V, Y }<p>
+        <p>E(f) = Next(E(r)) => { E, G }<p>
+        <p>C(fl) = Next(C(rb)) => { E }<p>
+        <p>E(r) = C(fr) => { E(n7-{1, 3}) }<p>
       </li>
       <li>
         <h3>n7-2</h3>
-        <p>n7-1と同様にE-perm(n7)であることが確定。<p>
-        <p>共通のコーナーと各エッジの色から共通のコーナーはL面奥に移動することがわかる。<p>
+        <p>Form(F) = (a:b:c), Form(R) = (a:b:c) => { E, F, G, R, V, Y }<p>
+        <p>E(f) = Next(E(r)) => { E, G }<p>
+        <p>C(fl) = Next(C(rb)) => { E }<p>
+        <p>E(f) = C(rf) => { E(n7-{2, 4}) }<p>
       </li>
       <li>
         <h3>n7-3</h3>
-        <p>n7-1と同様にE-perm(n7)であることが確定。<p>
-        <p>共通のコーナーと各エッジの色から共通のコーナーはR面奥に移動することがわかる。<p>
+        <p>see n7-1<p>
       </li>
       <li>
         <h3>n7-4</h3>
-        <p>n7-1と同様にE-perm(n7)であることが確定。<p>
-        <p>共通のコーナーと各エッジの色から共通のコーナーはL面奥に移動することがわかる。<p>
+        <p>see n7-2<p>
       </li>
     </ul>
   </div>
@@ -233,17 +231,23 @@
     <ul>
       <li>
         <h3>n8-1</h3>
-        <p>形(F(2:1), R(1:1:1))からA-perm, T-perm, V-perm, R-perm, G-permのいずれかであることがわかる。<p>
-        <p>エッジの色からR面のエッジがL面に移動することがわかり、この時点でT-permであることが確定。 </p>
+        <p>Form(F) = (a:a:b), Form(R) = (a:b:c) => { A, G, R, T, V }<p>
+        <p>E(r) = Invert(C(fr)) => { T(n8-1) }<p>
       </li>
       <li>
         <h3>n8-2</h3>
+        <p>Form(F) = (a:b:c), Form(R) = (a:b:b) => { A, G, R, T, V }<p>
+        <p>E(f) = Invert(C(rf)) => { T(n8-2) }<p>
       </li>
       <li>
         <h3>n8-3</h3>
+        <p>Form(F) = (a:b:b), Form(R) = (a:b:a) => { R, T }<p>
+        <p>E(r) = Invert(C(rf)) => { T(n8-3) }<p>
       </li>
       <li>
         <h3>n8-4</h3>
+        <p>Form(F) = (a:b:a), Form(R) = (a:a:b) => { R, T }<p>
+        <p>E(f) = Invert(C(fr)) => { T(n8-4) }<p>
       </li>
     </ul>
   </div>
@@ -262,8 +266,8 @@
       </li>
       <li>
         <h3>n9-4</h3>
-        <p>形からA-perm, V-permのいずれかであることがわかる。<p>
-        <p>F面、R面の共有していないコーナーの色が別々の色なので、V-perm(n9)であることが確定。<p>
+        <p>Form(F) = (a:b:b), Form(R) = (a:a:b) => { A, V }<p>
+        <p>C(fl) != C(rb) => { V(n9-4) }<p>
       </li>
     </ul>
   </div>
@@ -359,7 +363,7 @@
       </li>
       <li>
         <h3>n15-2</h3>
-        <p>F(2:1), R(1:2)の配置になっているので、Y-perm(n15)であることが確定。</p>
+        <p>Form(F) = (a:a:b), Form(R) = (a:b:b) => { Y(n15-2) }<p>
       </li>
       <li>
         <h3>n15-3</h3>
