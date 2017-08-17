@@ -897,11 +897,17 @@ $(function() {
   &lt;div class=&#34;type type-a cf&#34;&gt;
     &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/01.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;L&#39;UL&#39;U&#39;L&#39;U&#39;L&#39;ULUL2&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class=&#34;type type-c cf&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/01.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;UR&#39;U&#39;R&#39;U&#39;R&#39;URUR2&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;n2/U-perm&lt;/p&gt;
   &lt;div class=&#34;type type-a cf&#34;&gt;
     &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/02.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;RU&#39;RURURU&#39;R&#39;U&#39;R2&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;type type-c cf&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/02.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;LU&#39;LULULU&#39;L&#39;U&#39;L2&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;pattern&#34;&gt;

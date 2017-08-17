@@ -48,3 +48,8 @@
   transform: rotateZ(90deg);
   -ms-transform: rotate(90deg);
 }
+
+.type-c img {
+  transform: rotateZ(180deg);
+  -ms-transform: rotate(10deg);
+}
