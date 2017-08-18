@@ -119,14 +119,13 @@
       <li>
         <h3>n3-3</h3>
         <p>Form(F) = (a:b:b) and Form(R) = (a:a:b) => { A, V }</p>
-        <p>C(fl) = C(rb) => { A }</p>
+        <p>C(fl) = C(rb) => { A(n3-3, n4-3) }</p>
         <p>C(fl) = Invert(E(f)) => { A(n3-3) }</p>
       </li>
       <li>
         <h3>n3-4</h3>
         <p>Form(F) = (a:a:b) and Form(R) = (a:b:a) => { A, G }</p>
-        <p>E(r) = Prev(E(f)) => { A }</p>
-        <p>E(r) = C(fr) => { A(n3-4) }</p>
+        <p>E(f) = Next(E(rf)) => { A(n3-4) }</p>
       </li>
     </ul>
   </div>
@@ -142,13 +141,12 @@
       <li>
         <h3>n4-2</h3>
         <p>Form(F) = (a:b:a) and Form(R) = (a:b:b) => { A, G }</p>
-        <p>E(f) = Next(E(r)) => { A }</p>
-        <p>E(f) = Prev(C(rf) => { A(n4-2) }</p>
+        <p>E(f) = Next(E(r)) => { A(n4-2) }</p>
       </li>
       <li>
         <h3>n4-3</h3>
         <p>Form(F) = (a:b:b) and Form(R) = (a:a:b) => { A, V }</p>
-        <p>C(fl) = C(rb) => { A }</p>
+        <p>C(fl) = C(rb) => { A(n3-3, n4-3) }</p>
         <p>C(rb) = Invert(E(r)) => { A(n4-3) }</p>
       </li>
       <li>
@@ -269,6 +267,9 @@
       </li>
       <li>
         <h3>n9-2</h3>
+        <p>Form(F) = (a:b:c) and Form(R) = (a:b:c) => { E, V, F, R, Y, G }</p>
+        <p>E(f) = C(rf) and E(r) = C(fr) => { V, F }</p>
+        <p>C(fl) != C(rb) => { V(n9-2) }</p>
       </li>
       <li>
         <h3>n9-3</h3>
@@ -287,13 +288,15 @@
       <li>
         <h3>n10-1</h3>
         <p>Form(F) = (a:b:c) and Form(R) = (a:b:c) => { E, V, F, R, Y, G }</p>
-        <p>ColorNum(F and R) = 3 => { F }</p>
+        <p>E(f) = C(rf) and E(r) = C(fr) => { V, F }</p>
+        <p>C(fl) = C(rb) => { F }</p>
         <p>E(f) = Invert(C(fl)) => { F(n10-1) }</p>
       </li>
       <li>
         <h3>n10-2</h3>
         <p>Form(F) = (a:b:c) and Form(R) = (a:b:c) => { E, V, F, R, Y, G }</p>
-        <p>ColorNum(F and R) = 3 => { F }</p>
+        <p>E(f) = C(rf) and E(r) = C(fr) => { V, F }</p>
+        <p>C(fl) = C(rb) => { F }</p>
         <p>E(r) = Invert(C(rb)) => { F(n10-2) }</p>
       </li>
       <li>
@@ -309,10 +312,42 @@
   <a class="nav-perm">n11/R-perm</a>
   <div class="n-pattern">
     <img class="img-fluid" src="/rubiks_cube/img/pll/2face/11.png">
+    <ul>
+      <li>
+        <h3>n11-1</h3>
+      </li>
+      <li>
+        <h3>n11-2</h3>
+      </li>
+      <li>
+        <h3>n11-3</h3>
+      </li>
+      <li>
+        <h3>n11-4</h3>
+        <p>Form(F) = (a:b:b) and Form(R) = (a:b:a) => { R, T }</p>
+        <p>E(r) != Invert(C(rf)) => { R(n11-4) }</p>
+      </li>
+    </ul>
   </div>
   <a class="nav-perm">n12/R-perm</a>
   <div class="n-pattern">
     <img class="img-fluid" src="/rubiks_cube/img/pll/2face/12.png">
+    <ul>
+      <li>
+        <h3>n12-1</h3>
+        <p>Form(F) = (a:b:a) and Form(R) = (a:a:b) => { R, T }</p>
+        <p>E(f) != Invert(C(fr)) => { R(n12-1) }</p>
+      </li>
+      <li>
+        <h3>n12-2</h3>
+      </li>
+      <li>
+        <h3>n12-3</h3>
+      </li>
+      <li>
+        <h3>n12-4</h3>
+      </li>
+    </ul>
   </div>
   <a class="nav-perm">n13/J-perm</a>
   <div class="n-pattern">
@@ -382,6 +417,8 @@
       </li>
       <li>
         <h3>n15-4</h3>
+        <p>Form(F) = (a:b:c) and Form(R) = (a:b:c) => { E, F, G, R, V, Y }</p>
+        <p>E(f) = Invert(C(rf)) and E(r) = Invert(C(fr)) => { Y(n15-4) }</p>
       </li>
     </ul>
   </div>
@@ -392,10 +429,42 @@
   <a class="nav-perm">n17/G-perm</a>
   <div class="n-pattern">
     <img class="img-fluid" src="/rubiks_cube/img/pll/2face/17.png">
+    <ul>
+      <li>
+        <h3>n17-1</h3>
+      </li>
+      <li>
+        <h3>n17-2</h3>
+      </li>
+      <li>
+        <h3>n17-3</h3>
+        <p>Form(F) = (a:a:b) and Form(R) = (a:b:a) => { A, G }</p>
+        <p>E(f) != Next(E(f)) => { G(n17-3) }</p>
+      </li>
+      <li>
+        <h3>n17-4</h3>
+      </li>
+    </ul>
   </div>
   <a class="nav-perm">n18/G-perm</a>
   <div class="n-pattern">
     <img class="img-fluid" src="/rubiks_cube/img/pll/2face/18.png">
+    <ul>
+      <li>
+        <h3>n18-1</h3>
+        <p>Form(F) = (a:b:a) and Form(R) = (a:b:b) => { A, G }</p>
+        <p>E(f) != Next(E(r)) => { G(n18-1) }</p>
+      </li>
+      <li>
+        <h3>n18-2</h3>
+      </li>
+      <li>
+        <h3>n18-3</h3>
+      </li>
+      <li>
+        <h3>n18-4</h3>
+      </li>
+    </ul>
   </div>
   <a class="nav-perm">n19/G-perm</a>
   <div class="n-pattern">
