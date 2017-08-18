@@ -472,20 +472,6 @@ $(function() {
     </item>
     
     <item>
-      <title>OLL手順(別回し手順)</title>
-      <link>https://cuboktahedron.github.io/rubiks_cube/own_another_oll_patterns/</link>
-      <pubDate>Sun, 15 Jan 2017 20:50:12 +0900</pubDate>
-      
-      <guid>https://cuboktahedron.github.io/rubiks_cube/own_another_oll_patterns/</guid>
-      <description>&lt;div class=&#34;pattern&#34;&gt;
-  &lt;div class=&#34;lc&#34;&gt;&lt;img class=&#34;type-c&#34; src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/oll/25.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p&gt;25c&lt;/p&gt;&lt;p class=&#34;steps&#34;&gt;RL&#39;UR&#39;U&#39;LURU&#39;R&#39;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
       <title>OLL手順</title>
       <link>https://cuboktahedron.github.io/rubiks_cube/own_oll_patterns/</link>
       <pubDate>Mon, 02 Jan 2017 15:50:12 +0900</pubDate>
