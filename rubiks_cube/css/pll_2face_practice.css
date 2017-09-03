@@ -21,7 +21,7 @@
   float: left;
 }
 
-#config div + div{
+#config div + div {
   margin-left: 1em;
 }
 
@@ -30,8 +30,92 @@
   margin-bottom: 0.2em;
 }
 
+#filter .dir {
+  margin: 0.5em 0;
+}
+
+#filter .dir p {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-right: 0.4em;
+  text-align: center;
+  width: 50px;
+}
+
+#filter .perm-filters {
+  margin: 1em 0;
+}
+
+#filter .perm {
+  margin-bottom: 1em;
+}
+
+#filter .perm p.name {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-right: 0.4em;
+}
+
+#filter .pll {
+  float: left;
+  padding-left: 1em;
+  margin-right: 1em;
+}
+
+#filter .pll-line {
+  margin-bottom: 0.3em;
+}
+
+#filter p.no {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-right: 0.4em;
+}
+
+#filter a.check {
+  background: grey;
+  border: solid 2px #606060;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  height: 30px;
+  line-height: 26px;
+  margin-right: 0.4em;
+  text-align: center;
+  width: 30px;
+}
+
+#filter a.check.wide {
+  width: 60px;
+}
+
+#filter a.check:hover {
+  border: solid 2px white;
+}
+
+#filter a.check.on {
+  background: red;
+}
+
+#filter a.check.on:active {
+  background: grey;
+}
+
 #txt-time-to-answer,
 #txt-time-to-next {
   margin-bottom: 4px;
   width: 80px;
+}
+
+hr.filter-separator {
+  border 0;
+  border-bottom: solid 6px white;
+  height: 4px;
+  margin-top: 1.5em;
 }

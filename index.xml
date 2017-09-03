@@ -25,7 +25,7 @@
     &lt;div&gt;&lt;h2 id=&#34;desc-header&#34;&gt;&lt;/h2&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;config&#34;&gt;
+&lt;div id=&#34;config&#34; class=&#34;cf&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;Answer&lt;/p&gt;&lt;input id=&#34;txt-time-to-answer&#34; type=&#34;number&#34; size=&#34;8&#34; value=&#34;5000&#34; step=&#34;10&#34;&gt;ms&lt;br&gt;
   &lt;/div&gt;
@@ -34,9 +34,15 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;hr class=&#34;filter-separator&#34;&gt;
+
+&lt;div id=&#34;filter&#34;&gt;
+&lt;/div&gt;
+
 &lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/lib/three.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube_defs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cuboktahedron.github.io/q/cube/js/cube.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/pll_2face_data.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/pll_2face_practice.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
 </description>

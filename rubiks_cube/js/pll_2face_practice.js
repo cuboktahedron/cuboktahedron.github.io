@@ -164,10 +164,10 @@ $(function() {
   render();
 
   var stepss = [
-    "L'UL'U'L'U'L'ULUL2",
     "RU'RURURU'R'U'R2",
-    "(r')RU'RD2R'URD2R2(r)",
+    "L'UL'U'L'U'L'ULUL2",
     "R'2(r)U2R'D'RU'2(f')U'RU'(f)(r')",
+    "(r')RU'RD2R'URD2R2(r)",
     "UR'U'RU'RURU'R'URUR2U'R'U",
     "M'2UM'2U2M'2UM'2",
     "(r')RU'R'DRUR'D2L'ULUw(u')L'U'L(r)",
@@ -179,58 +179,38 @@ $(function() {
     "RUR'F'RUR'U'R'FR2U'R'U'",
     "R'U'RBR'U'RU(r')RU'R'2FRF(r)",
     "(r')R'2FwR2U'RU(r')RU'(u)(r)R'UFU'R'(r)",
-    "(r')(u')URU'(u)(r)R2Uw'RU'R'UR'UwR2",
     "R2Uw'RU'RUR'UwR'2(u)RU'R'(u')",
-    "Rw2U(r')(u)U'RU'R'URw'U2B'RB(f')",
+    "(r')(u')URU'(u)(r)R2Uw'RU'R'UR'UwR2",
     "R'U'(u)FR2UwR'URU'RUw'R'2(u')",
+    "Rw2U(r')(u)U'RU'R'URw'U2B'RB(f')",
     "(f)U'RD'R2UR'DU'RD'R2UR'DR(f')",
     "LU'RU'2L'UR'LU'RU'2L'UR'U'",
-  ];
-
-  var permDescs = [
-    'n2/U-perm',
-    'n1/U-perm',
-    'n4/A-perm',
-    'n3/A-perm',
-    'n5/Z-perm',
-    'n6/H-perm',
-    'n7/E-perm',
-    'n8/T-perm',
-    'n9/V-perm',
-    'n10/F-perm',
-    'n11/R-perm',
-    'n12/R-perm',
-    'n13/J-perm',
-    'n14/J-perm',
-    'n15/Y-perm',
-    'n17/G-perm',
-    'n16/G-perm',
-    'n19/G-perm',
-    'n18/G-perm',
-    'n20/N-perm',
-    'n21/N-perm',
   ];
 
   var yturns = ["", "(u)", "(u2)", "(u')" ];
   var rotU = ["", "U", "U2", "U'" ];
 
   var createNext = function() {
-    var i = Math.floor(Math.random() * 21);
+    if (filters.isAllOff) {
+      setTimeout(createNext, 1000);
+      return;
+    }
+
+    var next = filters.next();
     var j = Math.floor(Math.random() * 4);
     var k = Math.floor(Math.random() * 4);
-    var l = Math.floor(Math.random() * 4);
 
     var promise = $.Deferred().resolve().promise();
-    promise = promise.then((function(number) {
-      var steps = yturns[j] + rotU[l] + stepss[number] + yturns[k];
+    promise = promise.then((function() {
+      var steps = yturns[j] + rotU[k] + stepss[next.no] + rotU[next.typeNo];
 
       return function() {
         var d = $.Deferred();
         setup(d, steps);
-        setupDesc(i, j, k, l)
+        setupDesc(next);
         return d.promise();
       };
-    })(i)).then(function() {
+    })(next)).then(function() {
       var d = $.Deferred();
       var timerId;
       var answerTime = $('#txt-time-to-answer').val();
@@ -262,15 +242,15 @@ $(function() {
         d.resolve();
       }, nextTime);
       return d.promise();
-    }).then((function(number) {
-      var steps = yturns[j] + rotU[l] + stepss[number] + yturns[k];
+    }).then((function() {
+      var steps = yturns[j] + rotU[k] + stepss[next.no] + rotU[next.typeNo];
 
       return function() {
         var d = $.Deferred();
         reverseSetup(d, steps);
         return d.promise();
       };
-    })(i)).then(createNext);
+    })()).then(createNext);
   };
 
   var setup = function(d, steps) {
@@ -286,15 +266,15 @@ $(function() {
     }, 100);
   }
 
-  var setupDesc = function(i, j, k, l) {
-    $('#desc-header').text(permDescs[i]);
+  var setupDesc = function(next) {
+    $('#desc-header').text('n' + (next.no + 1) + '-' + (next.typeNo + 1) + '/' + next.perm + '-perm');
   };
 
   var reverseSetup = function(d, steps) {
     var rsteps = C.cube.reverseScrambleMarks(steps);
     C.cube.setup(rsteps, rotateForSetup);
     d.resolve();
-  }
+  };
 
   $('#txt-time-to-answer, #txt-time-to-next').change(function() {
     var val = $(this).val();
@@ -309,6 +289,148 @@ $(function() {
     $(this).val(val);
   });
 
+  var initFilter = function() {
+    var $filter = $('#filter');
+    var $permFilter = $('<div class="perm-filters"></div>');
+    var $formFilter = $('<div class="formfilters"></div>');
+    $filter.append($permFilter);
+    $filter.append($formFilter);
+    var perms = ['U', 'A', 'Z', 'H', 'E', 'T', 'V', 'F', 'R', 'J', 'Y', 'G', 'N'];
+    perms.forEach(function(perm) {
+      $permFilter.append('<a class="check on">' + perm + '</a>');
+
+      var permData = Pll2Face.filter(function(pll) {
+        return pll.perm === perm;
+      });
+      var $perm = $('<div class="perm cf"><div class="perm-line" data-perm="' + perm + '"><p class="name">' + perm + '-perm</p></div></div>');
+
+      permData.forEach(function(permData) {
+        var $pll = $('<div class="pll"></div>');
+        $pll.append('<div class="pll-line"><p class="no">n' + permData.no + '</p><a class="check on">&nbsp;</a></div>');
+        permData.types.forEach(function(type) {
+          var $check = $(
+            '<a class="type check on" data-form-f="' + type.formF + '"'
+            + ' data-form-r="' + type.formR + '"'
+            + ' data-perm="' + perm + '"'
+            + ' data-type="' + type.type + '"'
+            + ' data-pll-no="' + permData.no + '"'
+            + '>' + type.type + '</a>');
+          $pll.append($check);
+        });
+        $perm.append($pll);
+      });
+
+      $filter.append($perm);
+    });
+
+    $filter.find('.perm-filters a.check').click(function() {
+      var $this = $(this);
+      var isOn = $this.toggleClass('on').hasClass('on');
+      var perm = $this.text();
+      var $permLine = $filter.find('.perm-line[data-perm=' + perm + ']');
+      if (isOn) {
+        $permLine.parent().find('a.check').addClass('on');
+      } else {
+        $permLine.parent().find('a.check').removeClass('on');
+      }
+
+      filters.refresh();
+    });
+
+    $filter.find('.pll-line > a.check').click(function() {
+      var $this = $(this);
+      var isOn = $this.toggleClass('on').hasClass('on');
+      if (isOn) {
+        $this.closest('.pll').find('a.type.check').addClass('on');
+      } else {
+        $this.closest('.pll').find('a.type.check').removeClass('on');
+      }
+
+      filters.refresh();
+    });
+
+    $filter.find('a.type.check').click(function() {
+      $(this).toggleClass('on');
+      filters.refresh();
+    });
+
+    ['F', 'R'].forEach(function(dir) {
+      var $dir = $('<div class="dir" data-dir="' + dir + '"><p>' + dir + '</p></dir>');
+      ['AAA', 'AAB', 'ABA', 'ABB', 'ABC'].forEach(function(form) {
+        var $form = $('<a class="check wide on">' + form + '</a>');
+        $dir.append($form);
+      });
+      $formFilter.append($dir);
+    });
+
+    $formFilter.find('.dir a.check').click(function() {
+      var $this = $(this);
+      var isOn = $this.toggleClass('on').hasClass('on');
+      var dir = $this.parent().find('p').text();
+      var form = $this.text();
+      var dataName = 'data-form-' + dir.toLowerCase();
+      var findTarget = 'a.type.check[' + dataName + '="' + Forms[form] + '"]';
+      if (isOn) {
+        $filter.find(findTarget).addClass('on');
+      } else {
+        $filter.find(findTarget).removeClass('on');
+      }
+    });
+
+    filters.refresh();
+  };
+
+  var typeToIndex = {
+    'a': 0,
+    'b': 1,
+    'c': 2,
+    'd': 3,
+  };
+
+  var filters = {
+    get isAllOff() {
+      return !$('#filter a.type.check').hasClass('on');
+    },
+
+    refresh: function() {
+      var $types = $('#filter a.type.check');
+      var types = [];
+
+      $types.each(function() {
+        var $type = $(this);
+        var no = $type.data('pll-no') - 1;
+        var type = $type.data('type');
+        if (!types[no]) {
+          types[no] = [];
+        }
+        types[no][typeToIndex[type]] = $type;
+      });
+
+      this.types = types;
+    },
+
+    next: function(no) {
+      var no;
+      var perm;
+      var type;
+      var $type;
+
+      do {
+        no = Math.floor(Math.random() * 84);
+        perm = Math.floor(no / 4);
+        type = no % 4;
+        $type = this.types[perm][type];
+      } while (!$type.hasClass('on'));
+
+      return {
+        no: perm,
+        perm: $type.data('perm'),
+        typeNo: typeToIndex[$type.data('type')]
+      };
+    }
+  };
+
+  initFilter();
   createNext();
 });
 
