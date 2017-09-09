@@ -103,6 +103,10 @@
   background: red;
 }
 
+#filter a.check.partOn {
+  background: #600;
+}
+
 #filter a.check.on:active {
   background: grey;
 }

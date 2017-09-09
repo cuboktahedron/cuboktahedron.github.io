@@ -325,7 +325,7 @@ $(function() {
 
     $filter.find('.perm-filters a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.toggleClass('on').hasClass('on');
+      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
       var perm = $this.text();
       var $permLine = $filter.find('.perm-line[data-perm=' + perm + ']');
       if (isOn) {
@@ -335,11 +335,23 @@ $(function() {
       }
 
       filters.refresh();
+    }).on('update', function() {
+      var $this = $(this);
+      var perm = $this.text();
+      var $types = $filter.find('.perm-line[data-perm=' + perm + ']').parent().find('a.type.check');
+      var $typesWithOn = $types.filter('.on');
+      if ($typesWithOn.length === 0) {
+        $this.removeClass('on').removeClass('partOn');
+      } else if ($typesWithOn.length < $types.length) {
+        $this.removeClass('on').addClass('partOn');
+      } else {
+        $this.removeClass('partOn').addClass('on');
+      }
     });
 
     $filter.find('.pll-line > a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.toggleClass('on').hasClass('on');
+      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
       if (isOn) {
         $this.closest('.pll').find('a.type.check').addClass('on');
       } else {
@@ -347,6 +359,16 @@ $(function() {
       }
 
       filters.refresh();
+    }).on('update', function() {
+      var $this = $(this);
+      var $typesWithOn = $this.closest('.pll').find('a.type.check.on');
+      if ($typesWithOn.length === 0) {
+        $this.removeClass('on').removeClass('partOn');
+      } else if ($typesWithOn.length < 4) {
+        $this.removeClass('on').addClass('partOn');
+      } else {
+        $this.removeClass('partOn').addClass('on');
+      }
     });
 
     $filter.find('a.type.check').click(function() {
@@ -365,7 +387,7 @@ $(function() {
 
     $formFilter.find('.dir a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.toggleClass('on').hasClass('on');
+      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
       var dir = $this.parent().find('p').text();
       var form = $this.text();
       var dataName = 'data-form-' + dir.toLowerCase();
@@ -374,6 +396,23 @@ $(function() {
         $filter.find(findTarget).addClass('on');
       } else {
         $filter.find(findTarget).removeClass('on');
+      }
+
+      filters.refresh();
+    }).on('update', function() {
+      var $this = $(this);
+      var dir = $this.parent().find('p').text();
+      var form = $this.text();
+      var dataName = 'data-form-' + dir.toLowerCase();
+      var findTarget = 'a.type.check[' + dataName + '="' + Forms[form] + '"]';
+      var $types = $filter.find(findTarget);
+      var $typesWithOn = $types.filter('.on');
+      if ($typesWithOn.length === 0) {
+        $this.removeClass('on').removeClass('partOn');
+      } else if ($typesWithOn.length < $types.length) {
+        $this.removeClass('on').addClass('partOn');
+      } else {
+        $this.removeClass('partOn').addClass('on');
       }
     });
 
@@ -407,6 +446,9 @@ $(function() {
       });
 
       this.types = types;
+      $('#filter .pll-line > a.check').trigger('update');
+      $('#filter .dir a.check').trigger('update');
+      $('#filter .perm-filters a.check').trigger('update');
     },
 
     next: function(no) {
