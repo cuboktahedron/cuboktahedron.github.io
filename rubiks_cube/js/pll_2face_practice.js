@@ -291,6 +291,7 @@ $(function() {
 
   var initFilter = function() {
     var $filter = $('#filter');
+    $filter.append('<p class="type-num"></p>');
     var $permFilter = $('<div class="perm-filters"></div>');
     var $formFilter = $('<div class="formfilters"></div>');
     $filter.append($permFilter);
@@ -434,6 +435,7 @@ $(function() {
     refresh: function() {
       var $types = $('#filter a.type.check');
       var types = [];
+      var onNum;
 
       $types.each(function() {
         var $type = $(this);
@@ -449,6 +451,10 @@ $(function() {
       $('#filter .pll-line > a.check').trigger('update');
       $('#filter .dir a.check').trigger('update');
       $('#filter .perm-filters a.check').trigger('update');
+
+      onNum = $('#filter a.type.check.on').length;
+
+      $('#filter .type-num').text(onNum + '/84');
     },
 
     next: function(no) {

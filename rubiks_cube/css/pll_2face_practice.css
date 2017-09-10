@@ -30,6 +30,12 @@
   margin-bottom: 0.2em;
 }
 
+#filter .type-num {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  margin-right: 0.4em;
+}
+
 #filter .dir {
   margin: 0.5em 0;
 }
