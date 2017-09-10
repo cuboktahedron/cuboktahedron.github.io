@@ -326,7 +326,13 @@ $(function() {
 
     $filter.find('.perm-filters a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
+      var isOn;
+      if ($this.hasClass('partOn')) {
+        isOn = $this.removeClass('partOn').removeClass('on').hasClass('on');
+      } else {
+        isOn = $this.toggleClass('on').hasClass('on');
+      }
+      
       var perm = $this.text();
       var $permLine = $filter.find('.perm-line[data-perm=' + perm + ']');
       if (isOn) {
@@ -352,7 +358,12 @@ $(function() {
 
     $filter.find('.pll-line > a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
+      var isOn;
+      if ($this.hasClass('partOn')) {
+        isOn = $this.removeClass('partOn').removeClass('on').hasClass('on');
+      } else {
+        isOn = $this.toggleClass('on').hasClass('on');
+      }
       if (isOn) {
         $this.closest('.pll').find('a.type.check').addClass('on');
       } else {
@@ -388,7 +399,12 @@ $(function() {
 
     $formFilter.find('.dir a.check').click(function() {
       var $this = $(this);
-      var isOn = $this.removeClass('partOn').toggleClass('on').hasClass('on');
+      var isOn;
+      if ($this.hasClass('partOn')) {
+        isOn = $this.removeClass('partOn').removeClass('on').hasClass('on');
+      } else {
+        isOn = $this.toggleClass('on').hasClass('on');
+      }
       var dir = $this.parent().find('p').text();
       var form = $this.text();
       var dataName = 'data-form-' + dir.toLowerCase();
