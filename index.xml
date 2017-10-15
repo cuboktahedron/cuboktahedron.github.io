@@ -1287,6 +1287,12 @@ $(function() {
 上下左右が繋がっている囲碁です。&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-href-q-cube-cube-graph-target-blank-cube-graph-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/cube/cube-graph/&#34; target=&#34;blank&#34;&gt;Cube Graph&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;ルービックキューブのルートグラフを表示します。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     
