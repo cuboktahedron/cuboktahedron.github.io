@@ -741,6 +741,9 @@ $(function() {
   &lt;div class=&#34;type type-a cf&#34;&gt;
     &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/12.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;F&#39;R&#39;U&#39;RF&#39;R&#39;U(u&#39;)R&#39;U&#39;R&#39;URBR2&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
+  &lt;div class=&#34;type type-c cf&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/12.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;U&#39;RUR&#39;F&#39;RU&#39;2R&#39;U2R&#39;FRURU&#39;2R&#39;&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;n13/J-perm&lt;/p&gt;
@@ -787,19 +790,19 @@ $(function() {
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;n20/N-perm&lt;/p&gt;
   &lt;div class=&#34;type type-a cf&#34;&gt;
-    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/20.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;(f)U&#39;RD&#39;R2UR&#39;DU&#39;RD&#39;R2UR&#39;DR&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/20.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;R&#39;URU&#39;R&#39;F&#39;U&#39;FRUR&#39;FR&#39;F&#39;RU&#39;R&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&#34;type type-b cf&#34;&gt;
-    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/20.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;(f)U&#39;RD&#39;R2UR&#39;DU&#39;RD&#39;R2UR&#39;DR&#39;&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/20.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;UR&#39;URU&#39;R&#39;F&#39;U&#39;FRUR&#39;FR&#39;F&#39;RU&#39;R&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;n21/N-perm&lt;/p&gt;
   &lt;div class=&#34;type type-a cf&#34;&gt;
-    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/21.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;LU&#39;RU&#39;2L&#39;UR&#39;LU&#39;RU&#39;2L&#39;UR&#39;U&#39;&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/21.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;RU&#39;R&#39;ULwUFU&#39;R&#39;F&#39;RU&#39;RULw&#39;UR&#39;&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&#34;type type-b cf&#34;&gt;
-    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/21.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;LU&#39;RU&#39;2L&#39;UR&#39;LU&#39;RU&#39;2L&#39;UR&#39;U&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/pll/21.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;URU&#39;R&#39;ULwUFU&#39;R&#39;F&#39;RU&#39;RULw&#39;UR&#39;&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
