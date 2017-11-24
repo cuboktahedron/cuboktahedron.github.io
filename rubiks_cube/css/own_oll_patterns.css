@@ -45,12 +45,17 @@
   margin: 4px 0;
 }
 
-.type-d img {
-  transform: rotateZ(270deg);
-  -ms-transform: rotate(270deg);
+.type-b img {
+  transform: rotateZ(90deg);
+  -ms-transform: rotate(90deg);
 }
 
 .type-c img {
   transform: rotateZ(180deg);
   -ms-transform: rotate(180deg);
+}
+
+.type-d img {
+  transform: rotateZ(270deg);
+  -ms-transform: rotate(270deg);
 }
