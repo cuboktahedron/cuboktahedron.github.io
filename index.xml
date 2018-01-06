@@ -1305,6 +1305,12 @@ $(function() {
 &lt;p&gt;ルービックキューブのルートグラフを表示します。&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-href-q-cube-bldat-target-blank-bldat-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/cube/BLDat/&#34; target=&#34;blank&#34;&gt;BLDat&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;3×3×3ルービックキューブのBLD(M2/OP)の解析を行うツールです。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     
