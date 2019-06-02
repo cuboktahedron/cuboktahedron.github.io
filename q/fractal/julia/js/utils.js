@@ -1,19 +1,25 @@
 'use strict';
 
-class Complex {
+class MutableComplex {
   constructor(re, im) {
     this.re = re;
     this.im = im;
   }
-  
+
   add(c) {
-    return new Complex(this.re + c.re, this.im + c.im);
+    const re = this.re + c.re;
+    const im = this.im + c.im;
+    this.re = re;
+    this.im = im;
+    return this;
   }
 
   mul(c) {
     const re = this.re * c.re - this.im * c.im;
     const im = this.re * c.im + this.im * c.re;
-    return new Complex(re, im);
+    this.re = re;
+    this.im = im;
+    return this;
   }
 
   abs() {
@@ -31,15 +37,15 @@ class Complex {
       return this.re + " - " + -this.im + "i";
     }
   }
-};
+}
 
-const Diagnosis = {
-  elapsedTime: async (f) => {
+class Diagnosis {
+  static async elapsedTime(f) {
     const before = new Date();
     await f();
     return new Date() - before;
   }
-};
+}
 
 class SimpleEventEmitter {
   constructor() {
@@ -61,8 +67,8 @@ class SimpleEventEmitter {
   }
 };
 
-const Process = {
-  sleep: (ms) => {
+class Process {
+  static sleep(ms) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
@@ -71,16 +77,16 @@ const Process = {
   }
 };
 
-const WorkerUtils = {
-  createWorker: (relativePath) => {
+class WorkerUtils {
+  static createWorker(relativePath) {
     try {
       return this._createViaBlob(relativePath);
     } catch (e) {
       return new Worker(relativePath);
     }
-  },
+  }
 
-  _createViaBlob: (relativePath) => {
+  static _createViaBlob(relativePath) {
     var baseURL = window.location.href.replace(/\\/g, '/').replace(/\/[^\/]*$/, '/');
     var array = ['importScripts("' + baseURL + relativePath + '");'];
     var blob = new Blob(array, {type: 'text/javascript'});

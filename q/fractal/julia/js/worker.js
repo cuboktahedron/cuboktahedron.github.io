@@ -24,6 +24,7 @@ const calculation = (param) => {
   const maxRepeat = param.maxRepeat;
   const min = -1.0 * (1.0 / (zoom / 100));
   const max =  1.0 * (1.0 / (zoom / 100));
+  const power = param.power;
   const zs = setup(size, min, max, centerX, centerY);
   const output = initOutput(size, maxRepeat);
   let prevProgress = 0;
@@ -44,7 +45,15 @@ const calculation = (param) => {
           break;
         }
 
-        zi = zi.mul(zi).add(cs);
+        if (power === 2) {
+          zi = zi.mul(zi).add(cs);
+        } else {
+          const zi0 = new MutableComplex(zi.re, zi.im);
+          for (let p = 0; p < power; p++) {
+            zi = zi.mul(zi0);
+          }
+          zi.add(cs);
+        }
       }
     }
   }
@@ -60,7 +69,7 @@ const setup = (size, min, max, centerX, centerY) => {
   for (let y = 0; y < size; y++) {
     const mat = [];
     for (let x = 0; x < size; x++) {
-      mat.push(new Complex(xv[x], yv[y]))
+      mat.push(new MutableComplex(xv[x], yv[y]))
     }
     mat2.push(mat);
   }

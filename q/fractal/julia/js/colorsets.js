@@ -1,30 +1,32 @@
 'use strict';
 
-const colorPalettes = [
+const PresetColorPalettes = [
   {
     name: 'default(16)',
-    background: '#000',
-    background2: '#000',
+    background: '#000000',
+    background2: '#000000',
     colors: [
       "#3f32ae", "#e30ec2", "#baaaff", "#ffffff",
       "#ff949d", "#e80200", "#7a243d", "#000000",
       "#195648", "#6a8927", "#16ed75", "#32c1c3",
       "#057fc1", "#6e4e23", "#c98f4c", "#efe305",
-    ]
+    ],
+    preset: true
   }, {
     name: 'grayscale(16)',
-    background: '#000',
-    background2: '#000',
+    background: '#000000',
+    background2: '#000000',
     colors: [
-      "#000", "#111", "#222", "#333",
-      "#444", "#555", "#666", "#777",
-      "#888", "#999", "#aaa", "#bbb",
-      "#ccc", "#ddd", "#eee", "#fff",
-    ]
+      "#000000", "#111111", "#222222", "#333333",
+      "#444444", "#555555", "#666666", "#777777",
+      "#888888", "#999999", "#aaaaaa", "#bbbbbb",
+      "#cccccc", "#dddddd", "#eeeeee", "#ffffff",
+    ],
+    preset: true
   }, {
     name: 'grayscale(256)',
-    background: '#000',
-    background2: '#fff',
+    background: '#000000',
+    background2: '#ffffff',
     colors: [
       "#000000", "#010101", "#020202", "#030303",
       "#040404", "#050505", "#060606", "#070707",
@@ -90,11 +92,12 @@ const colorPalettes = [
       "#f4f4f4", "#f5f5f5", "#f6f6f6", "#f7f7f7",
       "#f8f8f8", "#f9f9f9", "#fafafa", "#fbfbfb",
       "#fcfcfc", "#fdfdfd", "#fefefe", "#ffffff",
-    ]
+    ],
+    preset: true
   }, {
     name: 'black-blue(256)',
-    background: '#000',
-    background2: '#ff0',
+    background: '#000000',
+    background2: '#ffff00',
     colors: [
       "#000000", "#000001", "#000002", "#000003",
       "#000004", "#000005", "#000006", "#000007",
@@ -160,11 +163,12 @@ const colorPalettes = [
       "#0000f4", "#0000f5", "#0000f6", "#0000f7",
       "#0000f8", "#0000f9", "#0000fa", "#0000fb",
       "#0000fc", "#0000fd", "#0000fe", "#0000ff",
-    ]
+    ],
+    preset: true
   }, {
     name: 'black-green(256)',
-    background: '#000',
-    background2: '#f0f',
+    background: '#00000',
+    background2: '#ff00ff',
     colors: [
       "#000000","#000100","#000200","#000300",
       "#000400","#000500","#000600","#000700",
@@ -230,11 +234,12 @@ const colorPalettes = [
       "#00f400","#00f500","#00f600","#00f700",
       "#00f800","#00f900","#00fa00","#00fb00",
       "#00fc00","#00fd00","#00fe00","#00ff00",
-    ]
+    ],
+    preset: true
   }, {
     name: 'black-red(256)',
-    background: '#000',
-    background2: '#0ff',
+    background: '#000000',
+    background2: '#00ffff',
     colors: [
       "#000000","#010000","#020000","#030000",
       "#040000","#050000","#060000","#070000",
@@ -300,19 +305,21 @@ const colorPalettes = [
       "#f40000","#f50000","#f60000","#f70000",
       "#f80000","#f90000","#fa0000","#fb0000",
       "#fc0000","#fd0000","#fe0000","#ff0000",
-    ]
+    ],
+    preset: true
   }, {
     name: 'binary',
-    background: '#000',
-    background2: '#fff',
+    background: '#000000',
+    background2: '#ffffff',
     colors: [
-      "#000",
-      "#fff",
-    ]
+      "#000000",
+      "#ffffff",
+    ],
+    preset: true
   }, {
     name: 'cycle(12)',
-    background: '#000',
-    background2: '#fff',
+    background: '#000000',
+    background2: '#ffffff',
     colors: [
       "#e60012",
       "#f39800",
@@ -326,11 +333,12 @@ const colorPalettes = [
       "#920783",
       "#e4007f",
       "#e5004f",
-    ]
+    ],
+    preset: true
   }, {
     name: 'cycle(24)',
-    background: '#000',
-    background2: '#fff',
+    background: '#000000',
+    background2: '#ffffff',
     colors: [
       '#E60012',
       '#EB6100',
@@ -356,6 +364,7 @@ const colorPalettes = [
       '#E5006A',
       '#E5004F',
       '#E60033',
-    ]
+    ],
+    preset: true
   }
 ];
