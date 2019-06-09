@@ -16,7 +16,6 @@ onmessage = (e) => {
 const calculation = (param) => {
   postMessage({ end: false, progress: 'ready for calculating...' });
 
-  const cs = param.cs;
   const centerX = param.center.re;
   const centerY = param.center.im;
   const zoom = param.zoom;
@@ -25,7 +24,8 @@ const calculation = (param) => {
   const min = -1.0 * (1.0 / (zoom / 100));
   const max =  1.0 * (1.0 / (zoom / 100));
   const power = param.power;
-  const zs = setup(size, min, max, centerX, centerY);
+  const cs = setup(size, min, max, centerX, centerY);
+  const zs = setup(size, 0, 0, 0, 0);
   const output = initOutput(size, maxRepeat);
   let prevProgress = 0;
 
@@ -45,14 +45,16 @@ const calculation = (param) => {
           break;
         }
 
+        const c = cs[y][x];
+
         if (power === 2) {
-          zi = zi.mul(zi).add(cs);
+          zi = zi.mul(zi).add(c);
         } else {
           const zi0 = new MutableComplex(zi.re, zi.im);
           for (let p = 0; p < power; p++) {
             zi = zi.mul(zi0);
           }
-          zi.add(cs);
+          zi.add(c);
         }
       }
     }
