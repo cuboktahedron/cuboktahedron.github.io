@@ -694,15 +694,51 @@ $(function() {
       <guid>https://cuboktahedron.github.io/tetris_practice/</guid>
       <description>
 
-&lt;h2 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y028y88y008y8-amp-h-0-amp-v-0-97-target-blank-中空けrenの練習-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y028y88y008y8&amp;amp;h=0&amp;amp;v=0.97&#34; target=&#34;_blank&#34;&gt;中空けRENの練習&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;3列ren&#34;&gt;3列REN&lt;/h2&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y800-h-0-v-0-97-target-blank-種0-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y8008y8y800&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種0&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;a-href-q-tetsimu-ns-l-h-0-v-0-97-target-blank-開幕szの練習-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=L&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;開幕SZの練習&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;4列ren&#34;&gt;4列REN&lt;/h2&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y8-h-0-v-0-97-target-blank-種0-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種0&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y008y8-h-0-v-0-97-target-blank-種1-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y008y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種1&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y028y8-h-0-v-0-97-target-blank-種2-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y028y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種2&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y8-h-0-v-0-97-target-blank-種3-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種3&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y88y0y8y8-h-0-v-0-97-target-blank-種6-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y88y0y8y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種6&lt;/a&gt;&lt;/h4&gt;
+
+&lt;h4 id=&#34;a-href-q-tetsimu-f-8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y88y0y8y88y0y8y8-h-0-v-0-97-target-blank-種9-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?f=8y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y000y88y0y8y88y0y8y88y0y8y8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;種9&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;a-href-q-tetsimu-ns-z-h-0-v-0-97-target-blank-開幕zsの練習-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=Z&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;開幕ZSの練習&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;開幕&#34;&gt;開幕&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-8-h-0-v-0-97-target-blank-i-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=8&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[I*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-g-h-0-v-0-97-target-blank-j-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=g&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[J*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-o-h-0-v-0-97-target-blank-l-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=o&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[L*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-w-h-0-v-0-97-target-blank-o-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=w&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[O*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-m-h-0-v-0-97-target-blank-t-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=M&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[T*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-e-h-0-v-0-97-target-blank-s-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=E&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[S*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-u-h-0-v-0-97-target-blank-z-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=U&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[Z*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-l-h-0-v-0-97-target-blank-sz-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=L&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[SZ*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-z-h-0-v-0-97-target-blank-zs-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=Z&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[ZS*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-q-h-0-v-0-97-target-blank-lj-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=q&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[LJ*]&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-href-q-tetsimu-ns-j-h-0-v-0-97-target-blank-jl-a&#34;&gt;&lt;a href=&#34;https://cuboktahedron.github.io/q/tetsimu/?ns=j&amp;h=0&amp;v=0.97&#34; target=&#34;_blank&#34;&gt;[JL*]&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
