@@ -19,49 +19,50 @@ $(function() {
       return colors;
     })(),
 
+    //    [L, R, U, D, B, F]
     origin:
     [
       [
         [
-          [K, G, K, W, K, R],
-          [K, G, K, W, K, K],
-          [K, G, K, W, O, K],
+          [K, G, K, W, K, R], // RDF
+          [K, G, K, W, K, K], // RD
+          [K, G, K, W, O, K], // RDB
         ], [
-          [K, G, K, K, K, R],
-          [K, G, K, K, K, K],
-          [K, G, K, K, O, K],
+          [K, G, K, K, K, R], // RF
+          [K, G, K, K, K, K], // R
+          [K, G, K, K, O, K], // RB
         ], [
-          [K, G, Y, K, K, R],
-          [K, G, Y, K, K, K],
-          [K, G, Y, K, O, K],
+          [K, G, Y, K, K, R], // RUF
+          [K, G, Y, K, K, K], // RU
+          [K, G, Y, K, O, K], // RUB
         ]
       ], [
         [
-          [K, K, K, W, K, R],
-          [K, K, K, W, K, K],
-          [K, K, K, W, O, K],
+          [K, K, K, W, K, R], // DF
+          [K, K, K, W, K, K], // D
+          [K, K, K, W, O, K], // DB
         ], [
-          [K, K, K, K, K, R],
-          [K, K, K, K, K, K],
-          [K, K, K, K, O, K],
+          [K, K, K, K, K, R], // F
+          [K, K, K, K, K, K], // [core]
+          [K, K, K, K, O, K], // B
         ], [
-          [K, K, Y, K, K, R],
-          [K, K, Y, K, K, K],
-          [K, K, Y, K, O, K],
+          [K, K, Y, K, K, R], // UF
+          [K, K, Y, K, K, K], // U
+          [K, K, Y, K, O, K], // UB
         ]
       ], [
         [
-          [B, K, K, W, K, R],
-          [B, K, K, W, K, K],
-          [B, K, K, W, O, K],
+          [B, K, K, W, K, R], // LDF
+          [B, K, K, W, K, K], // LD
+          [B, K, K, W, O, K], // LDB
         ], [
-          [B, K, K, K, K, R],
-          [B, K, K, K, K, K],
-          [B, K, K, K, O, K],
+          [B, K, K, K, K, R], // LF
+          [B, K, K, K, K, K], // L
+          [B, K, K, K, O, K], // LB
         ], [
-          [B, K, Y, K, K, R],
-          [B, K, Y, K, K, K],
-          [B, K, Y, K, O, K],
+          [B, K, Y, K, K, R], // LUF
+          [B, K, Y, K, K, K], // LU
+          [B, K, Y, K, O, K], // LUB
         ]
       ],
     ],

@@ -22,6 +22,7 @@ $(function() {
       setup: '',
       rotation: '',
       velocity: 30,
+      visibles: '',
       zoom: '100',
       x: -50,
       y: 30,
@@ -87,7 +88,7 @@ $(function() {
     if (setupping) {
       return false;
     }
-    C.cube.setCubes(resetCubes());
+    C.cube.setCubes(resetCubes(D.initialParams.visibles));
     setupping = true;
     preRecess = 60;
     postRecess = 0;
@@ -110,8 +111,75 @@ $(function() {
     }, 100);
   };
 
-  var resetCubes = function() {
-    var colors = C.cubeDefs.colors;
+  var resetCubes = function(visibless) {
+    var visibleFaces = visibless.split(',').map(function(face) {
+      var faceOfPiece = function(face) {
+        switch(face[0]) {
+          case 'l': return 0;
+          case 'r': return 1;
+          case 'u': return 2;
+          case 'd': return 3;
+          case 'b': return 4;
+          case 'f': return 5;
+          default: return -1;
+        }
+      }
+
+      var sortedFace = face.split('').sort();
+      var color = sortedFace.shift();
+
+      switch (sortedFace.join('')) {
+        case 'dfr': return { piece: 0, face: faceOfPiece(face), color: color };
+        case 'dr': return { piece: 1, face: faceOfPiece(face), color: color };
+        case 'bdr': return { piece: 2, face: faceOfPiece(face), color: color };
+        case 'fr': return { piece: 3, face: faceOfPiece(face), color: color };
+        case 'r': return { piece: 4, face: faceOfPiece(face), color: color };
+        case 'br': return { piece: 5, face: faceOfPiece(face), color: color };
+        case 'fru': return { piece: 6, face: faceOfPiece(face), color: color };
+        case 'ru': return { piece: 7, face: faceOfPiece(face), color: color };
+        case 'bru': return { piece: 8, face: faceOfPiece(face), color: color };
+        case 'df': return { piece: 9, face: faceOfPiece(face), color: color };
+        case 'd': return { piece: 10, face: faceOfPiece(face), color: color };
+        case 'bd': return { piece: 11, face: faceOfPiece(face), color: color };
+        case 'f': return { piece: 12, face: faceOfPiece(face), color: color };
+        case '': return { piece: 13, face: faceOfPiece(face), color: color };
+        case 'b': return { piece: 14, face: faceOfPiece(face), color: color };
+        case 'fu': return { piece: 15, face: faceOfPiece(face), color: color };
+        case 'u': return { piece: 16, face: faceOfPiece(face), color: color };
+        case 'bu': return { piece: 17, face: faceOfPiece(face), color: color };
+        case 'dfl': return { piece: 18, face: faceOfPiece(face), color: color };
+        case 'dl': return { piece: 19, face: faceOfPiece(face), color: color };
+        case 'bdl': return { piece: 20, face: faceOfPiece(face), color: color };
+        case 'fl': return { piece: 21, face: faceOfPiece(face), color: color };
+        case 'l': return { piece: 22, face: faceOfPiece(face), color: color };
+        case 'bl': return { piece: 23, face: faceOfPiece(face), color: color };
+        case 'flu': return { piece: 24, face: faceOfPiece(face), color: color };
+        case 'lu': return { piece: 25, face: faceOfPiece(face), color: color };
+        case 'blu': return { piece: 26, face: faceOfPiece(face), color: color };
+        default: return {piece: -1, face: -1, color: -1 };
+      }
+    });
+
+    var visibleOrigin = $.extend(true, {}, C.cubeDefs.origin);
+
+    for (x = 0; x < 3; x++) {
+      for (y = 0; y < 3; y++) {
+        for (z = 0; z < 3; z++) {
+          var pieceNo = x * 9 + y * 3 + z;
+
+          for (i = 0; i < 6; i++) {
+            var visible = visibleFaces.find(function(visibleFace) {
+              return visibleFace.piece === pieceNo && visibleFace.face === i;
+            });
+            if (visibless && !visible) {
+              visibleOrigin[x][y][z][i] = null;
+            } else if (visible) {
+              visibleOrigin[x][y][z][i] = visible.color;
+            }
+          }
+        }
+      }
+    }
 
     var x, y, z, i;
     var cube;
@@ -137,7 +205,12 @@ $(function() {
             materials = [];
 
             for (i = 0; i < 6; i++) {
-              materials.push(new THREE.MeshLambertMaterial({ color: colors[C.cubeDefs.origin[x][y][z][i]]}));
+              if (visibleOrigin[x][y][z][i] != null) {
+                console.log(visibleOrigin[x][y][z][i]);
+                materials.push(new THREE.MeshLambertMaterial({ color: C.cubeDefs.colors[visibleOrigin[x][y][z][i]], side: THREE.DoubleSide}));
+              } else {
+                materials.push(new THREE.MeshLambertMaterial({ color: 0x000000, transparent: true, opacity: 0.15}));
+              }
             }
 
             cube = new THREE.Mesh(
@@ -273,7 +346,7 @@ $(function() {
 
   initScene();
   setup();
-  C.cube.setCubes(resetCubes())
+  C.cube.setCubes(resetCubes(D.initialParams.visibles))
   render();
 
   velocity = D.initialParams.velocity;

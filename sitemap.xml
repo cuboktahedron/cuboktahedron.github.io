@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuboktahedron.github.io/rubiks_cube/m2_patterns/</loc>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cuboktahedron.github.io/rubiks_cube/pll_2face_practice/</loc>
     <lastmod>2017-03-11T14:44:12+09:00</lastmod>
   </url>
@@ -37,6 +42,18 @@
   </url>
   
   <url>
+    <loc>https://cuboktahedron.github.io/tags/bld/</loc>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cuboktahedron.github.io/tags/m2/</loc>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cuboktahedron.github.io/tags/oll/</loc>
     <lastmod>2017-01-02T15:50:12+09:00</lastmod>
     <priority>0</priority>
@@ -50,13 +67,13 @@
   
   <url>
     <loc>https://cuboktahedron.github.io/tags/rubiks_cube/</loc>
-    <lastmod>2017-03-11T14:44:12+09:00</lastmod>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cuboktahedron.github.io/rubiks_cube/</loc>
-    <lastmod>2017-03-11T14:44:12+09:00</lastmod>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,7 +90,7 @@
   
   <url>
     <loc>https://cuboktahedron.github.io/</loc>
-    <lastmod>2017-03-11T14:44:12+09:00</lastmod>
+    <lastmod>2020-04-12T17:15:12+09:00</lastmod>
     <priority>0</priority>
   </url>
   
