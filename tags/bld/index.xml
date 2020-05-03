@@ -9,6 +9,80 @@
     <atom:link href="https://cuboktahedron.github.io/tags/bld/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>OLD Pochman手順</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</link>
+      <pubDate>Sun, 03 May 2020 22:01:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</guid>
+      <description>
+
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+
+&lt;p&gt;Old pochmann法では以下の手順で2点交換を繰り返し揃えていく。&lt;/p&gt;
+
+&lt;p&gt;１．セットアップ&lt;br /&gt;
+２．2点交換&lt;br /&gt;
+３．逆セットアップ&lt;/p&gt;
+
+&lt;p&gt;セットアップの際、バッファや副作用で入れ替わるピースを移動させないようにする必要がある。&lt;br /&gt;
+具体的にはコーナーのセットアップ手順では、U面、L面、B面、M面、S面を&lt;br /&gt;
+エッジのセットアップ手順では、U面、R面、F面、B面、S面をそれぞれ回転してはいけない。&lt;/p&gt;
+
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;赤：バッファ&lt;/li&gt;
+&lt;li&gt;緑：移動先&lt;/li&gt;
+&lt;li&gt;白：副作用１&lt;/li&gt;
+&lt;li&gt;青：副作用２&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;赤 ⇔ 緑の 2 点交換が起きる。&lt;br /&gt;
+副作用が起きるピースは偶数回2点交換を行うと元に戻る&lt;/p&gt;
+
+&lt;h3 id=&#34;corner&#34;&gt;Corner&lt;/h3&gt;
+
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;変形Y-perm&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/op/transformed-y-perm.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;ulb3,rdf4,ul0,ub1&#34;&gt;RU&#39;R&#39;U&#39;RUR&#39;F&#39;RUR&#39;U&#39;R&#39;FR&lt;/p&gt;
+      &lt;p class=&#34;explain&#34;&gt;PLL(n15/Y-perm)の手順からFとF&#39;のセットアップ、逆セットアップ手順をなくした手順になっている。&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;edge&#34;&gt;Edge&lt;/h3&gt;
+
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;T-perm&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/op/t-perm.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;ul3,ur4,urf0,urb1&#34;&gt;RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;RUR&#39;F&#39;&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;J-perm(n13)&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/op/j-perm-a.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;uf3,ur4,urf0,urb1&#34;&gt;RUR&#39;F&#39;RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;J-perm(n14)&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/op/j-perm-b.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;ub3,ur4,urf0,urb1&#34;&gt;R&#39;U&#39;RBR&#39;U&#39;RU(r&#39;)RU&#39;R&#39;2FRF(r)&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;Parity&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;p class=&#34;explain&#34;&gt;T-perm -&gt; J-perm(n14) -&gt; T-perm を回す。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/old_pochmann_patterns.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>M2手順</title>
       <link>https://cuboktahedron.github.io/rubiks_cube/m2_patterns/</link>
       <pubDate>Sun, 12 Apr 2020 17:15:12 +0900</pubDate>
@@ -16,7 +90,7 @@
       <guid>https://cuboktahedron.github.io/rubiks_cube/m2_patterns/</guid>
       <description>
 
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;赤：バッファ(DF)&lt;/li&gt;
@@ -27,8 +101,6 @@
 &lt;p&gt;赤 ⇔ 緑の2点交換が起きる。&lt;br /&gt;
 BDエッジ((い)、(ち))、FUエッジ((え)、(て))の手順は、奇数回目の入れ替えの際の手順となっている。&lt;br /&gt;
 M2法は1手順ごとにM列が180°回転するため、偶数回目の場合は、(い)と(え)、(ち)と(て)の手順をそれぞれ入れ替えて実施する。&lt;/p&gt;
-
-&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;UB(あ)&lt;/p&gt;

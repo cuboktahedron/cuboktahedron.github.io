@@ -16,7 +16,7 @@
       <guid>https://cuboktahedron.github.io/rubiks_cube/m2_patterns/</guid>
       <description>
 
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;赤：バッファ(DF)&lt;/li&gt;
@@ -27,8 +27,6 @@
 &lt;p&gt;赤 ⇔ 緑の2点交換が起きる。&lt;br /&gt;
 BDエッジ((い)、(ち))、FUエッジ((え)、(て))の手順は、奇数回目の入れ替えの際の手順となっている。&lt;br /&gt;
 M2法は1手順ごとにM列が180°回転するため、偶数回目の場合は、(い)と(え)、(ち)と(て)の手順をそれぞれ入れ替えて実施する。&lt;/p&gt;
-
-&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
 
 &lt;div class=&#34;pattern&#34;&gt;
   &lt;p&gt;UB(あ)&lt;/p&gt;
