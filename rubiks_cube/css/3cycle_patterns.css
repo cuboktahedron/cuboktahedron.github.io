@@ -1,0 +1,17 @@
+div.from {
+  padding-left: 1em;
+}
+
+div.to {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: "Courier New", Courier, Consolas, Monaco, monospace;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  padding-left: 1em;
+}
+
+div.to:hover {
+  background-color: grey;
+}

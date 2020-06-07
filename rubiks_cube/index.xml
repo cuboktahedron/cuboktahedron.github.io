@@ -6,8 +6,27 @@
     <description>Recent content in Rubiks_cubes on Ununique.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 03 May 2020 22:01:12 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 22:36:15 +0900</lastBuildDate>
     <atom:link href="https://cuboktahedron.github.io/rubiks_cube/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>3cycle</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/3cycle/</link>
+      <pubDate>Sat, 09 May 2020 22:36:15 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/3cycle/</guid>
+      <description>
+
+&lt;p&gt;最適化とかは全然できていないが、一応一通りのパターンを自分なりに導いてみたものです。
+チェックも出来てないので、間違いが含まれている可能性があります。&lt;/p&gt;
+
+&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;
+
+&lt;div id=&#34;patterns&#34;&gt;&lt;/div&gt;
+
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/3cycle_patterns.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>OLD Pochman手順</title>

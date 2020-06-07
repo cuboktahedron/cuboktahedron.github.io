@@ -206,7 +206,6 @@ $(function() {
 
             for (i = 0; i < 6; i++) {
               if (visibleOrigin[x][y][z][i] != null) {
-                console.log(visibleOrigin[x][y][z][i]);
                 materials.push(new THREE.MeshLambertMaterial({ color: C.cubeDefs.colors[visibleOrigin[x][y][z][i]], side: THREE.DoubleSide}));
               } else {
                 materials.push(new THREE.MeshLambertMaterial({ color: 0x000000, transparent: true, opacity: 0.15}));

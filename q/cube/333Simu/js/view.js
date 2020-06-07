@@ -366,7 +366,6 @@ $(function() {
       }
 
       headSetup += rotTable[mark];
-      console.log(headSetup);
     }
 
     return headSetup;
