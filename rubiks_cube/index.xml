@@ -11,13 +11,13 @@
     
     <item>
       <title>3cycle</title>
-      <link>https://cuboktahedron.github.io/rubiks_cube/3cycle/</link>
+      <link>https://cuboktahedron.github.io/rubiks_cube/corner_3cycle/</link>
       <pubDate>Sat, 09 May 2020 22:36:15 +0900</pubDate>
       
-      <guid>https://cuboktahedron.github.io/rubiks_cube/3cycle/</guid>
+      <guid>https://cuboktahedron.github.io/rubiks_cube/corner_3cycle/</guid>
       <description>
 
-&lt;p&gt;最適化とかは全然できていないが、一応一通りのパターンを自分なりに導いてみたものです。
+&lt;p&gt;最適化とかは全然できてませんが、一応一通りのパターンを自分なりに導いてみたものです。
 チェックも出来てないので、間違いが含まれている可能性があります。&lt;/p&gt;
 
 &lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;

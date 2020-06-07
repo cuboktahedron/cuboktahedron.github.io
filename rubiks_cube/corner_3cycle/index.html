@@ -4,7 +4,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta charset="utf-8" />
       <meta name="author" content="cuboktahedron"/>
-      <title>Rubiks_cubes</title>
+      <title>3cycle</title>
       <script src="https://cuboktahedron.github.io//js/tracking.js"></script>
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/reset.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
@@ -17,8 +17,12 @@
               integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
               crossorigin="anonymous"></script></head>
       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/css/iziModal.css" integrity="sha256-m/nnXscwkcMbAFsUOys9WKr+MzlZz3q7EcJpkOxItaU=" crossorigin="anonymous" />
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/js/iziModal.js" integrity="sha256-rPSLT4QVhivrxPwK7xeqPLVWDDtc2YHkZHVxs1I6u9Y=" crossorigin="anonymous"></script>
+      
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/base.css" >
-      <link rel="stylesheet" href="https://cuboktahedron.github.io///css/" >
+      <link rel="stylesheet" href="https://cuboktahedron.github.io//rubiks_cube/css/3cycle_patterns.css" >
   <body>
 
 
@@ -42,46 +46,19 @@
 </header>
 <div class="container">
   <article class="main-contents col-sm-9">
-    <h2>OLL</h2>
-    <br>
-    <a href="./own_oll_patterns"><h3>手順</h3></a>
-    <p>
-      自分が使っているOLLの回し方をまとめています。(57/57)
-    </p>
-    <br>
-    <h2>PLL</h2>
-    <a href="./own_pll_patterns"><h3>手順</h3></a>
-    <p>
-      自分が使っているPLLの回し方をまとめています。(21/21)
-    </p>
-    <br>
-    <a href="./pll_2face"><h3>PLL2面判断全組み合わせ</h3></a>
-    <p>
-      全PLLの全配色に対して全方向から見た際の組み合わせを確認できます。
-    </p>
-    <br>
-    <a href="./pll_2face_practice"><h3>PLL2面判断強化</h3></a>
-    <p>
-      PLLの2面判断力が鍛えられます。
-    </p>
-    <br>
-    <h2>BLD</h2>
-    <a href="./m2_patterns"><h3>M2法</h3></a>
-    <p>
-      M2法の回し方まとめています。
-    </p>
-    <br>
-    <a href="./old_pochmann_patterns"><h3>Old Pochmann法</h3></a>
-    <p>
-      OLD Pochmann法の回し方まとめています。
-    </p>
-    <br>
-    <a href="./corner_3cycle"><h3>Corner 3-cycle</h3></a>
-    <p>
-      コーナー3-cycleの回し方まとめています。
-    </p>
+    
+
+<p>最適化とかは全然できてませんが、一応一通りのパターンを自分なりに導いてみたものです。
+チェックも出来てないので、間違いが含まれている可能性があります。</p>
+
+<h2 id="手順">手順</h2>
+
+<div id="patterns"></div>
+
+<script src="/rubiks_cube/js/3cycle_patterns.js"></script>
+
   </article>
-  <nav class="sidemenu col-sm-3">
+  <article class="sidemenu col-sm-3">
     <div>タグ一覧</div>
 <ul class="tags">
   
@@ -135,7 +112,7 @@
   
 </ul>
 
-  </nav>
+  </article>
 </div>
 
 <footer>
