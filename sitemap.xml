@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cuboktahedron.github.io/rubiks_cube/r2_patterns/</loc>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cuboktahedron.github.io/rubiks_cube/corner_3cycle/</loc>
     <lastmod>2020-05-09T22:36:15+09:00</lastmod>
   </url>
@@ -59,7 +64,7 @@
   
   <url>
     <loc>https://cuboktahedron.github.io/tags/bld/</loc>
-    <lastmod>2020-05-09T22:36:15+09:00</lastmod>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -88,14 +93,20 @@
   </url>
   
   <url>
+    <loc>https://cuboktahedron.github.io/tags/r2/</loc>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cuboktahedron.github.io/tags/rubiks_cube/</loc>
-    <lastmod>2020-05-09T22:36:15+09:00</lastmod>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cuboktahedron.github.io/rubiks_cube/</loc>
-    <lastmod>2020-05-09T22:36:15+09:00</lastmod>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,7 +123,7 @@
   
   <url>
     <loc>https://cuboktahedron.github.io/</loc>
-    <lastmod>2020-05-09T22:36:15+09:00</lastmod>
+    <lastmod>2020-06-07T17:14:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
