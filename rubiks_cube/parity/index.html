@@ -4,7 +4,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta charset="utf-8" />
       <meta name="author" content="cuboktahedron"/>
-      <title>3 Cycle</title>
+      <title>Parity手順</title>
       <script src="https://cuboktahedron.github.io//js/tracking.js"></script>
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/reset.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
@@ -17,8 +17,12 @@
               integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
               crossorigin="anonymous"></script></head>
       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/css/iziModal.css" integrity="sha256-m/nnXscwkcMbAFsUOys9WKr+MzlZz3q7EcJpkOxItaU=" crossorigin="anonymous" />
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.4.2/js/iziModal.js" integrity="sha256-rPSLT4QVhivrxPwK7xeqPLVWDDtc2YHkZHVxs1I6u9Y=" crossorigin="anonymous"></script>
+      
       <link rel="stylesheet" href="https://cuboktahedron.github.io//css/base.css" >
-      <link rel="stylesheet" href="https://cuboktahedron.github.io///css/" >
+      <link rel="stylesheet" href="https://cuboktahedron.github.io//rubiks_cube/css/parity.css" >
   <body>
 
 
@@ -42,26 +46,51 @@
 </header>
 <div class="container">
   <article class="main-contents col-sm-9">
-    <h1>「3 Cycle」タグがついたページ</h1>
+    
 
-    
-    
-    <div class="tag-post">
-  <div><a href="https://cuboktahedron.github.io/rubiks_cube/corner_3cycle/">3cycle</a></div>
-  <div>
-    最適化とかは全然できてませんが、一応一通りのパターンを自分なりに導いてみたものです。 チェックも出来てないので、間違いが含まれている可能性があ
+<h2 id="parityの解消手順">Parityの解消手順</h2>
+
+<p>Edge手順/Corner手順</p>
+
+<div class="pattern">
+  <p>Old pochmann/Old pochmann</p>
+  <div class="type">
+    <div class="lc"><img src="/rubiks_cube/img/parity/old_pochmann_old_pochmann.png"></div>
+    <div class="rc">
+      <p class="steps">
+        RUR'U'R'FR2U'R'U'RUR'F'R'U'RBR'U'RU(r')RU'R'2FRF(r)RUR'U'R'FR2U'R'U'RUR'F'
+      </p>
+      <div class="explain">
+        T-perm -> J-Perm -> T-perm
+      </div>
+    </div>
   </div>
 </div>
 
-<hr>
+<div class="pattern">
+  <p>M2/Old pochmann</p>
+  <div class="type">
+    <div class="lc"><img src="/rubiks_cube/img/parity/m2_old_pochman.png"></div><div class="rc"><p class="steps">D'L2DM2D'L2D</p></div>
+  </div>
+</div>
 
+<div class="pattern">
+  <p>M2/R2</p>
+  <div class="type">
+    <div class="lc"><img src="/rubiks_cube/img/parity/m2_r2.png"></div>
+    <div class="rc">
+    <p class="steps">Rw2U'Rw'2(u)R'U'RBR'U'RU(r')RU'R'2FRF(r)(u')L2Uw</p>
+      <div class="explain">
+        Rw2U'Rw’2 -> J-Perm -> (u')L2Uw
+      </div>
+    </div>
+  </div>
+</div>
 
-    
+<script src="/rubiks_cube/js/patterns.js"></script>
 
-    
-    
   </article>
-  <nav class="sidemenu col-sm-3">
+  <article class="sidemenu col-sm-3">
     <div>タグ一覧</div>
 <ul class="tags">
   
@@ -121,11 +150,14 @@
   
 </ul>
 
-  </nav>
+  </article>
 </div>
+
 <footer>
   copyright©2017-2020 <a href="/profile">cuboktahedron(cubokta)</a> All rights reserved.
 </footer>
 </body>
 </html>
+
+
 

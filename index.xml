@@ -6,8 +6,59 @@
     <description>Recent content on Ununique.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 Jun 2020 17:14:48 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 17:34:00 +0900</lastBuildDate>
     <atom:link href="https://cuboktahedron.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Parity手順</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/parity/</link>
+      <pubDate>Sun, 21 Jun 2020 17:34:00 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/rubiks_cube/parity/</guid>
+      <description>
+
+&lt;h2 id=&#34;parityの解消手順&#34;&gt;Parityの解消手順&lt;/h2&gt;
+
+&lt;p&gt;Edge手順/Corner手順&lt;/p&gt;
+
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;Old pochmann/Old pochmann&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/parity/old_pochmann_old_pochmann.png&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;rc&#34;&gt;
+      &lt;p class=&#34;steps&#34;&gt;
+        RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;RUR&#39;F&#39;R&#39;U&#39;RBR&#39;U&#39;RU(r&#39;)RU&#39;R&#39;2FRF(r)RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39;RUR&#39;F&#39;
+      &lt;/p&gt;
+      &lt;div class=&#34;explain&#34;&gt;
+        T-perm -&gt; J-Perm -&gt; T-perm
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;M2/Old pochmann&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/parity/m2_old_pochman.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34;&gt;D&#39;L2DM2D&#39;L2D&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;pattern&#34;&gt;
+  &lt;p&gt;M2/R2&lt;/p&gt;
+  &lt;div class=&#34;type&#34;&gt;
+    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/parity/m2_r2.png&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;rc&#34;&gt;
+    &lt;p class=&#34;steps&#34;&gt;Rw2U&#39;Rw&#39;2(u)R&#39;U&#39;RBR&#39;U&#39;RU(r&#39;)RU&#39;R&#39;2FRF(r)(u&#39;)L2Uw&lt;/p&gt;
+      &lt;div class=&#34;explain&#34;&gt;
+        Rw2U&#39;Rw’2 -&gt; J-Perm -&gt; (u&#39;)L2Uw
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/patterns.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>R2手順</title>
@@ -243,12 +294,6 @@ R2法は1手順ごとにR列が180°回転するため、偶数回目の場合�
     &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/op/j-perm-b.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;ub3,ur4,urf0,urb1&#34;&gt;R&#39;U&#39;RBR&#39;U&#39;RU(r&#39;)RU&#39;R&#39;2FRF(r)&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;pattern&#34;&gt;
-  &lt;p&gt;Parity&lt;/p&gt;
-  &lt;div class=&#34;type&#34;&gt;
-    &lt;p class=&#34;explain&#34;&gt;T-perm -&gt; J-perm(n14) -&gt; T-perm を回す。&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 
 &lt;script src=&#34;https://cuboktahedron.github.io/rubiks_cube/js/old_pochmann_patterns.js&#34;&gt;&lt;/script&gt;
 </description>
@@ -404,12 +449,6 @@ M2法は1手順ごとにM列が180°回転するため、偶数回目の場合�
   &lt;p&gt;DB(い)&lt;/p&gt;
   &lt;div class=&#34;type&#34;&gt;
     &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/m2/db.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;db3,df4,ub0&#34;&gt;MU2MU2&lt;/p&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;pattern&#34;&gt;
-  &lt;p&gt;Parity&lt;/p&gt;
-  &lt;div class=&#34;type&#34;&gt;
-    &lt;div class=&#34;lc&#34;&gt;&lt;img src=&#34;https://cuboktahedron.github.io/rubiks_cube/img/m2/parity.png&#34;&gt;&lt;/div&gt;&lt;div class=&#34;rc&#34;&gt;&lt;p class=&#34;steps&#34; data-visibles=&#34;ul3,df4,ub0&#34;&gt;D&#39;L2DM2D&#39;L2D&lt;/p&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 

@@ -13,7 +13,7 @@ $(function() {
   $('.pattern img').click(function() {
     var $type = $(this).closest('.type');
     var rotation;
-    // TODO: ここはレイアウトの移行が完了留守まで暫定的な対処
+
     if ($type.length === 0) {
       rotation = $(this).closest('.pattern').find('.steps').text();
     } else {
