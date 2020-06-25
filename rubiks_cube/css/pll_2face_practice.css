@@ -124,7 +124,7 @@
 }
 
 hr.filter-separator {
-  border 0;
+  border: 0;
   border-bottom: solid 6px white;
   height: 4px;
   margin-top: 1.5em;
