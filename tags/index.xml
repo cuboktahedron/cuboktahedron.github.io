@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ununique.</title>
+    <link>https://cuboktahedron.github.io/tags/</link>
+    <description>Recent content in Tags on Ununique.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 21 Jun 2020 17:34:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://cuboktahedron.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bld</title>
+      <link>https://cuboktahedron.github.io/tags/bld/</link>
+      <pubDate>Sun, 21 Jun 2020 17:34:00 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/bld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rubiks_cube</title>
+      <link>https://cuboktahedron.github.io/tags/rubiks_cube/</link>
+      <pubDate>Sun, 21 Jun 2020 17:34:00 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/rubiks_cube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>r2</title>
+      <link>https://cuboktahedron.github.io/tags/r2/</link>
+      <pubDate>Sun, 07 Jun 2020 17:14:48 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/r2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3-cycle</title>
+      <link>https://cuboktahedron.github.io/tags/3-cycle/</link>
+      <pubDate>Sat, 09 May 2020 22:36:15 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/3-cycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>old_pochmann</title>
+      <link>https://cuboktahedron.github.io/tags/old_pochmann/</link>
+      <pubDate>Sun, 03 May 2020 22:01:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/old_pochmann/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>m2</title>
+      <link>https://cuboktahedron.github.io/tags/m2/</link>
+      <pubDate>Sun, 12 Apr 2020 17:15:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/m2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pll</title>
+      <link>https://cuboktahedron.github.io/tags/pll/</link>
+      <pubDate>Sat, 11 Mar 2017 14:44:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/pll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tetris</title>
+      <link>https://cuboktahedron.github.io/tags/tetris/</link>
+      <pubDate>Mon, 02 Jan 2017 16:04:37 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/tetris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oll</title>
+      <link>https://cuboktahedron.github.io/tags/oll/</link>
+      <pubDate>Mon, 02 Jan 2017 15:50:12 +0900</pubDate>
+      
+      <guid>https://cuboktahedron.github.io/tags/oll/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
