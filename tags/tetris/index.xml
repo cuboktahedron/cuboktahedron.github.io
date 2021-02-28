@@ -17,7 +17,7 @@
       <pubDate>Mon, 02 Jan 2017 16:04:37 +0900</pubDate>
       
       <guid>https://cuboktahedron.github.io/tetris_practice/</guid>
-      <description>3列REN 種0 4列REN 種0 種1 種2 種3 種6 種9 開幕 [I*] [J*] [L*] [O*] [T*] [S*] [Z*] [SZ*] [ZS*] [LJ*] [JL*]</description>
+      <description>3列REN 種0 4列REN 種0 種1 種2 種3 種6 種9 開幕 I [I*] J [J*] [JL*] [JLO*] [JLT*] L [L*] [LJ*] [LJO*] [LJT*] O [O*] S [S*] [SZ*] [SZO*] T [T*] Z [Z*] [ZS*] [ZSO*]</description>
     </item>
     
   </channel>
