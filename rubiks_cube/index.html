@@ -1,2 +1,171 @@
-<!doctype html><html><head><script src=/js/tracking.js></script><meta charset=utf-8><meta name=author content="cuboktahedron"><title>Rubiks_cubes</title>
-<link rel=icon href=/favicon.ico><link rel=stylesheet href=/css/reset.css><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css integrity=sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css><script src=https://code.jquery.com/jquery-3.1.1.min.js integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js integrity=sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK crossorigin=anonymous></script></head><link rel=stylesheet href=/css/base.css><body><header><nav class=navbar><ul class="nav navbar-nav"><li class="nav-item active"><a class=nav-link href=/>Home</a></li><li class=nav-item><a class=nav-link href=/rubiks_cube>RCube</a></li></ul></nav><div class=jumbotron><div class=container><h1>Ununique.</h1></div></div></header><div class=container><article class="main-contents col-sm-9"><h2>CFOP</h2><br><a href=./own_oll_patterns><h3>OLL</h3></a><br><a href=./own_pll_patterns><h3>PLL</h3></a><br><a href=./pll_2face><h3>PLL2面判断全組み合わせ</h3></a><br><a href=./pll_2face_practice><h3>PLL2面判断強化</h3></a><br><h2>Roux Method</h2><br><a href=./rm_cmll_patterns><h3>CMLL</h3></a><br><a href=./rm_eo_patterns><h3>EO</h3></a><br><a href=./rm_lr_patterns><h3>LR</h3></a><br><a href=./rm_l4e_patterns><h3>L4E</h3></a><br><h2>BLD</h2><a href=./m2_patterns><h3>M2法</h3></a><br><a href=./r2_patterns><h3>R2法</h3></a><br><a href=./old_pochmann_patterns><h3>Old Pochmann法</h3></a><br><a href=./corner_3cycle><h3>Corner 3-cycle</h3></a><br><a href=./parity><h3>Parity</h3></a></article><nav class="sidemenu col-sm-3"><h3>タグ一覧</h3><ul class=tags><li><a href=https://cuboktahedron.github.io//tags/3-cycle/><div><span class=badge></span>3-cycle (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/bld/><div><span class=badge></span>bld (5)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/cmll/><div><span class=badge></span>cmll (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/eo/><div><span class=badge></span>eo (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/lr/><div><span class=badge></span>lr (2)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/m2/><div><span class=badge></span>m2 (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/old_pochmann/><div><span class=badge></span>old_pochmann (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/oll/><div><span class=badge></span>oll (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/pll/><div><span class=badge></span>pll (3)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/r2/><div><span class=badge></span>r2 (1)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/roux_method/><div><span class=badge></span>roux_method (4)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/rubiks_cube/><div><span class=badge></span>rubiks_cube (13)</div></a></li><li><a href=https://cuboktahedron.github.io//tags/tetris/><div><span class=badge></span>tetris (1)</div></a></li></ul></nav></div><footer>copyright©2017-2024 <a href=/profile>cuboktahedron(cubokta)</a> All rights reserved.</footer></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="/js/tracking.js"></script>
+      <meta charset="utf-8" />
+      <meta name="author" content="cuboktahedron"/>
+      <title>Rubiks_cubes</title>
+      <link rel="icon" href="/favicon.ico">
+      <link rel="stylesheet" href="/css/reset.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css" />
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+              integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+              crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+              integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+              crossorigin="anonymous"></script></head>
+      
+      <link rel="stylesheet" href="/css/base.css" >
+
+      
+  <body>
+
+
+<header>
+  <nav class="navbar">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/rubiks_cube">RCube</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Ununique.</h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <article class="main-contents col-sm-9">
+    <h2>CFOP</h2>
+    <br>
+    <a href="./own_oll_patterns"><h3>OLL</h3></a>
+    <br>
+    <a href="./own_pll_patterns"><h3>PLL</h3></a>
+    <br>
+    <a href="./pll_2face"><h3>PLL2面判断全組み合わせ</h3></a>
+    <br>
+    <a href="./pll_2face_practice"><h3>PLL2面判断強化</h3></a>
+    <br>
+    <h2>Roux Method</h2>
+    <br>
+    <a href="./rm_cmll_patterns"><h3>CMLL</h3></a>
+    <br>
+    <a href="./rm_eo_patterns"><h3>EO</h3></a>
+    <br>
+    <a href="./rm_lr_patterns"><h3>LR</h3></a>
+    <br>
+    <a href="./rm_l4e_patterns"><h3>L4E</h3></a>
+    <br>
+    <h2>BLD</h2>
+    <a href="./m2_patterns"><h3>M2法</h3></a>
+    <br>
+    <a href="./r2_patterns"><h3>R2法</h3></a>
+    <br>
+    <a href="./old_pochmann_patterns"><h3>Old Pochmann法</h3></a>
+    <br>
+    <a href="./corner_3cycle"><h3>Corner 3-cycle</h3></a>
+    <br>
+    <a href="./parity"><h3>Parity</h3></a>
+  </article>
+  <nav class="sidemenu col-sm-3">
+    <h3>タグ一覧</h3>
+<ul class="tags">
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/3-cycle/">
+      <div><span class="badge"></span>3-cycle (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/bld/">
+      <div><span class="badge"></span>bld (5)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/cmll/">
+      <div><span class="badge"></span>cmll (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/eo/">
+      <div><span class="badge"></span>eo (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/lr/">
+      <div><span class="badge"></span>lr (2)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/m2/">
+      <div><span class="badge"></span>m2 (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/old_pochmann/">
+      <div><span class="badge"></span>old_pochmann (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/oll/">
+      <div><span class="badge"></span>oll (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/pll/">
+      <div><span class="badge"></span>pll (3)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/r2/">
+      <div><span class="badge"></span>r2 (1)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/roux_method/">
+      <div><span class="badge"></span>roux_method (4)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/rubiks_cube/">
+      <div><span class="badge"></span>rubiks_cube (13)</div>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://cuboktahedron.github.io//tags/tetris/">
+      <div><span class="badge"></span>tetris (1)</div>
+    </a>
+  </li>
+  
+</ul>
+
+  </nav>
+</div>
+
+<footer>
+  copyright©2017-2025 <a href="/profile">cuboktahedron(cubokta)</a> All rights reserved.
+</footer>
+</body>
+</html>
+
+
+

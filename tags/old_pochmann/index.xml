@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Old_pochmann on Ununique.</title><link>https://cuboktahedron.github.io/tags/old_pochmann/</link><description>Recent content in Old_pochmann on Ununique.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 03 May 2020 22:01:12 +0900</lastBuildDate><atom:link href="https://cuboktahedron.github.io/tags/old_pochmann/index.xml" rel="self" type="application/rss+xml"/><item><title>OLD Pochman手順</title><link>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</link><pubDate>Sun, 03 May 2020 22:01:12 +0900</pubDate><guid>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</guid><description>はじめに Old pochmann法では以下の手順で2点交換を繰り返し揃えていく。 １．セットアップ ２．2点交換 ３．逆セットアップ セットアップの際、バ</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Old_pochmann on Ununique.</title>
+    <link>https://cuboktahedron.github.io/tags/old_pochmann/</link>
+    <description>Recent content in Old_pochmann on Ununique.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 03 May 2020 22:01:12 +0900</lastBuildDate>
+    <atom:link href="https://cuboktahedron.github.io/tags/old_pochmann/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OLD Pochman手順</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</link>
+      <pubDate>Sun, 03 May 2020 22:01:12 +0900</pubDate>
+      <guid>https://cuboktahedron.github.io/rubiks_cube/old_pochmann_patterns/</guid>
+      <description>はじめに Old pochmann法では以下の手順で2点交換を繰り返し揃えていく。 １．セットアップ ２．2点交換 ３．逆セットアップ セットアップの際、バ</description>
+    </item>
+  </channel>
+</rss>

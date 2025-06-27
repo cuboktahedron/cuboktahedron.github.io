@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cmll on Ununique.</title><link>https://cuboktahedron.github.io/tags/cmll/</link><description>Recent content in Cmll on Ununique.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 14 Apr 2024 09:00:00 +0900</lastBuildDate><atom:link href="https://cuboktahedron.github.io/tags/cmll/index.xml" rel="self" type="application/rss+xml"/><item><title>CMLL手順</title><link>https://cuboktahedron.github.io/rubiks_cube/rm_cmll_patterns/</link><pubDate>Sun, 14 Apr 2024 09:00:00 +0900</pubDate><guid>https://cuboktahedron.github.io/rubiks_cube/rm_cmll_patterns/</guid><description>H-Case RU'2R'U'RUR'U'RU'R' π-Case RU'2R'2U'R2U'R'2U'2R T-Case RUR'U'R'FRF' U-Case FRUR'U'F' L-Case FRU'R'U'RUR'F' Sune-Case RUR'URU'2R' Anti-Sune-Case RU'2R'U'RU'R' Without-Headlight(J-perm) RUR'F'RUR'U'R'FR2U'R'U' With-Headlight(Y-perm) FRU'R'U'RUR'F'RUR'U'R'FRF'</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cmll on Ununique.</title>
+    <link>https://cuboktahedron.github.io/tags/cmll/</link>
+    <description>Recent content in Cmll on Ununique.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 14 Apr 2024 09:00:00 +0900</lastBuildDate>
+    <atom:link href="https://cuboktahedron.github.io/tags/cmll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CMLL手順</title>
+      <link>https://cuboktahedron.github.io/rubiks_cube/rm_cmll_patterns/</link>
+      <pubDate>Sun, 14 Apr 2024 09:00:00 +0900</pubDate>
+      <guid>https://cuboktahedron.github.io/rubiks_cube/rm_cmll_patterns/</guid>
+      <description>H-Case RU&#39;2R&#39;U&#39;RUR&#39;U&#39;RU&#39;R&#39; π-Case RU&#39;2R&#39;2U&#39;R2U&#39;R&#39;2U&#39;2R T-Case RUR&#39;U&#39;R&#39;FRF&#39; U-Case FRUR&#39;U&#39;F&#39; L-Case FRU&#39;R&#39;U&#39;RUR&#39;F&#39; Sune-Case RUR&#39;URU&#39;2R&#39; Anti-Sune-Case RU&#39;2R&#39;U&#39;RU&#39;R&#39; Without-Headlight(J-perm) RUR&#39;F&#39;RUR&#39;U&#39;R&#39;FR2U&#39;R&#39;U&#39; With-Headlight(Y-perm) FRU&#39;R&#39;U&#39;RUR&#39;F&#39;RUR&#39;U&#39;R&#39;FRF&#39;</description>
+    </item>
+  </channel>
+</rss>

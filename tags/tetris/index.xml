@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tetris on Ununique.</title><link>https://cuboktahedron.github.io/tags/tetris/</link><description>Recent content in Tetris on Ununique.</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 02 Jan 2017 16:04:37 +0900</lastBuildDate><atom:link href="https://cuboktahedron.github.io/tags/tetris/index.xml" rel="self" type="application/rss+xml"/><item><title>テトリス練習</title><link>https://cuboktahedron.github.io/tetris_practice/</link><pubDate>Mon, 02 Jan 2017 16:04:37 +0900</pubDate><guid>https://cuboktahedron.github.io/tetris_practice/</guid><description>3列REN 種0 4列REN 種0 種1 種2 種3 種6 種9 開幕 I [I*] J [J*] [JL*] [JLO*] [JLT*] L [L*] [LJ*] [LJO*] [LJT*] O [O*] S [S*] [SZ*] [SZO*] T [T*] Z [Z*] [ZS*] [ZSO*]</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tetris on Ununique.</title>
+    <link>https://cuboktahedron.github.io/tags/tetris/</link>
+    <description>Recent content in Tetris on Ununique.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 02 Jan 2017 16:04:37 +0900</lastBuildDate>
+    <atom:link href="https://cuboktahedron.github.io/tags/tetris/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>テトリス練習</title>
+      <link>https://cuboktahedron.github.io/tetris_practice/</link>
+      <pubDate>Mon, 02 Jan 2017 16:04:37 +0900</pubDate>
+      <guid>https://cuboktahedron.github.io/tetris_practice/</guid>
+      <description>3列REN 種0 4列REN 種0 種1 種2 種3 種6 種9 開幕 I [I*] J [J*] [JL*] [JLO*] [JLT*] L [L*] [LJ*] [LJO*] [LJT*] O [O*] S [S*] [SZ*] [SZO*] T [T*] Z [Z*] [ZS*] [ZSO*]</description>
+    </item>
+  </channel>
+</rss>
