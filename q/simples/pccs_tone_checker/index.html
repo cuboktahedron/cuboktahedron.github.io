@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PCCSトーン判定ツール</title>
+  <script src="/js/tracking.js"></script>
+  <link href="style.css?20250704" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div id="dropZone">
+      <h1>PCCSトーン判定ツール</h1>
+      <div id="color-area">
+        <input type="text" id="hexInput" value="#ff0000" maxlength="7" size="8" style="margin-right: 0.5rem;" />
+        <input type="color" id="colorInput" value="#ff0000" />
+        <button id="add-history-btn" style="margin-left: 0.5rem;">履歴に追加</button>
+        <input type="file" id="imageLoader" accept="image/*" />
+        <button id="image-select" type="button" style="margin-left: 0.5rem;">画像を選択</button>
+      </div>
+
+      <div class="hsl-display" id="hslDisplay">色相(H): - , 彩度(S): - , 明度(L): -</div>
+
+      <div class="results" id="results">
+        <h2>近いPCCSトーン候補（上位3件）</h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 250px;">トーン</th>
+              <th>色相</th>
+              <th>距離</th>
+              <th>色</th>
+            </tr>
+          </thead>
+          <tbody id="resultBody">
+            <tr>
+              <td colspan="4">色を選択してください</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="history" id="historyArea">
+        <h3>選択履歴</h3>
+
+        <div style="margin-top: 1rem;">
+          <button id="toggleDeleteModeBtn">削除：OFF</button>
+        </div>
+        <div id="colorHistory" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 6px;"></div>
+      </div>
+
+      <div style="margin-top: 0.5rem;">
+        <div id="canvas-area" style="display: none;">
+          <div style="display: inline-block;">
+            <canvas id="imageCanvas" style="border:1px solid #ccc; margin-top: 0.5rem;"></canvas>
+            <label style="display: block; margin-top: 0.5rem;">
+              <input type="checkbox" id="toggleMarkers" checked /> 選択位置を表示
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 360度の角度差（環状）
+    function hueDistance(h1, h2) {
+      let d = Math.abs(h1 - h2);
+      return d > 180 ? 360 - d : d;
+    }
+
+    // 色距離の計算
+    function colorDistance(hsl1, hsl2) {
+      const dh = hueDistance(hsl1.h, hsl2.h) / 180 * 100;
+      const ds = Math.abs(hsl1.s - hsl2.s);
+      const dl = Math.abs(hsl1.l - hsl2.l);
+      return Math.sqrt(dh * dh + ds * ds + dl * dl);
+    }
+
+    // HEX -> HSL変換
+    function rgbToHsl(r, g, b) {
+      r /= 255; g /= 255; b /= 255;
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      let h = 0, s = 0, l = (max + min) / 2;
+
+      if (max !== min) {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)); break;
+          case g: h = ((b - r) / d + 2); break;
+          case b: h = ((r - g) / d + 4); break;
+        }
+        h *= 60;
+      }
+      return { h: Math.round(h), s: Math.round(s * 100), l: Math.round(l * 100) };
+    }
+
+    // RGB -> HEX変換
+    function rgbToHex(r, g, b) {
+      return "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("").toUpperCase();
+    }
+  </script>
+  <script>
+    const toneJapaneseNames = {
+      V: "ビビッド", b: "ブライト", s: "ストロング", dp: "ディープ",
+      lt: "ライト", sf: "ソフト", d: "ダル", dk: "ダーク",
+      p: "ペール", ltg: "ライトグレイッシュ", g: "グレイッシュ", dkg: "ダークグレイッシュ"
+    };
+
+    // カラーコードから色情報を更新
+    function updateFromHex(inputHex) {
+      const hex = inputHex.trim().replace(/^#/, '');
+      const validHex = /^[0-9A-Fa-f]{6}$/;
+      if (!validHex.test(hex)) return;
+
+      const fullHex = `#${hex.toUpperCase()}`;
+      document.getElementById("colorInput").value = fullHex;
+      document.getElementById("hexInput").value = fullHex;
+
+      const r = parseInt(hex.substr(0, 2), 16);
+      const g = parseInt(hex.substr(2, 2), 16);
+      const b = parseInt(hex.substr(4, 2), 16);
+      const hsl = rgbToHsl(r, g, b);
+
+      document.getElementById("hslDisplay").textContent =
+        `色相(H): ${hsl.h}°, 彩度(S): ${hsl.s}, 明度(L): ${hsl.l}`;
+
+      // トーン判定処理
+      let results = pccsData.map(item => ({
+        tone: item.tone,
+        hueIndex: item.hueIndex,
+        hueCode: item.hueCode,
+        hueName: item.hueName,
+        distance: colorDistance(hsl, item.hsl),
+        hex: item.hex,
+      }));
+
+      results.sort((a, b) => a.distance - b.distance);
+      const top3 = results.slice(0, 3);
+
+      const tbody = document.getElementById("resultBody");
+      tbody.innerHTML = "";
+      top3.forEach(res => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${res.tone}:${toneJapaneseNames[res.tone]}</td>
+        <td>${res.hueIndex}:${res.hueCode}(${res.hueName})</td>
+        <td>${res.distance.toFixed(2)}</td>
+        <td><span class="color-swatch" style="background:${res.hex}"></span> ${res.hex}</td>
+    `;
+        tbody.appendChild(tr);
+        tr.getElementsByClassName("color-swatch")[0].addEventListener("click", () => updateFromHex(res.hex));
+      });
+    }
+
+    const historySet = new Set();
+    let deleteMode = false;
+
+    // 選択履歴に追加
+    function addToHistory(hex, markerIndex = null) {
+      historySet.add(hex);
+
+      const container = document.createElement("div");
+      container.className = "swatch-container";
+      container.dataset.hex = hex;
+      if (markerIndex !== null) {
+        container.dataset.marker = "true";
+      }
+
+      const swatch = document.createElement("div");
+      swatch.className = "swatch";
+      swatch.style.backgroundColor = hex;
+      swatch.title = hex;
+      swatch.addEventListener("click", () => updateFromHex(hex));
+
+      const label = document.createElement("div");
+      label.className = "entry-number";
+      label.style.fontSize = "0.8rem";
+      label.style.textAlign = "center";
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "×";
+      deleteBtn.className = "delete-btn";
+      deleteBtn.addEventListener("click", () => {
+        const all = Array.from(document.querySelectorAll(".swatch-container"));
+        const index = all.indexOf(container);
+
+        if (container.dataset.marker === "true") {
+          const markerContainers = all.filter(el => el.dataset.marker === "true");
+          const markerIndex = markerContainers.indexOf(container);
+          if (markerIndex >= 0) {
+            markers.splice(markerIndex, 1);
+            redrawMarkers();
+          }
+        }
+
+        container.remove();
+        historySet.delete(hex);
+        updateHistoryNumbers();
+      });
+
+      container.appendChild(swatch);
+      container.appendChild(label);
+      container.appendChild(deleteBtn);
+      document.getElementById("colorHistory").appendChild(container);
+      updateHistoryNumbers();
+    }
+
+    const canvasArea = document.getElementById('canvas-area');
+    const imageCanvas = document.getElementById('imageCanvas');
+    const ctx = imageCanvas.getContext('2d', { willReadFrequently: true });
+    let markers = [];
+    let baseImageData = null;
+    let imageLoaded = false;
+
+    function redrawMarkers() {
+      if (!baseImageData) return;
+      ctx.putImageData(baseImageData, 0, 0);
+      if (!document.getElementById("toggleMarkers").checked) return;
+
+      const rect = imageCanvas.getBoundingClientRect();
+      const scaleX = imageCanvas.width / rect.width;
+
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      markers.forEach(({ x, y, hex }, i) => {
+        const label = (i + 1).toString();
+        const radius = 10 * scaleX;
+        const fontSize = 16 * scaleX;
+        ctx.font = `bold ${fontSize}px sans-serif`;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = "rgba(0, 0, 0, 0.8)";
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 2 * scaleX;
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = "#fff";
+        ctx.fillText(label, x, y);
+      });
+    }
+
+    function updateMarkerIndices() {
+      const rows = document.querySelectorAll("#historyList .history-entry");
+      rows.forEach((row, i) => {
+        const numberLabel = row.querySelector(".entry-number");
+        if (numberLabel) numberLabel.textContent = (i + 1) + ". ";
+      });
+    }
+
+    function clearHistory() {
+      const colorHistory = document.getElementById("colorHistory");
+      colorHistory.replaceChildren();
+    }
+
+    function updateHistoryNumbers() {
+      const containers = document.querySelectorAll("#colorHistory .swatch-container");
+      let markerCount = 0;
+      containers.forEach((entry) => {
+        const label = entry.querySelector(".entry-number");
+        if (!label) return;
+        if (entry.dataset.marker === "true") {
+          markerCount++;
+          label.textContent = `#${markerCount}`;
+        } else {
+          label.textContent = "";
+        }
+      });
+    }
+
+    function loadImageToCanvas(src) {
+      const img = new Image();
+      img.onload = function () {
+        const parentWidth = imageCanvas.parentElement.clientWidth;
+        const scale = img.width > parentWidth ? parentWidth / img.width : 1;
+
+        const displayWidth = img.width * scale;
+        const displayHeight = img.height * scale;
+
+        // 内部サイズは元画像サイズ、CSSはスケーリング用
+        imageCanvas.width = img.width;
+        imageCanvas.height = img.height;
+        imageCanvas.style.width = "min(100%, 600px)";
+        ctx.drawImage(img, 0, 0);
+        baseImageData = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+        clearHistory();
+        markers = [];
+        imageLoaded = true;
+
+        canvasArea.style.display = '';
+        redrawMarkers();
+      }
+      img.src = src;
+    }
+
+  </script>
+  <script>
+    // カラーピッカーのinput
+    document.getElementById("colorInput").addEventListener("input", e => {
+      const hex = e.target.value;
+      document.getElementById("hexInput").value = hex;
+      updateFromHex(hex);
+    });
+
+    // カラーコードのinput
+    document.getElementById("hexInput").addEventListener("input", e => {
+      updateFromHex(e.target.value);
+    });
+
+    // 画像選択のclick
+    document.getElementById("image-select").addEventListener("click", e => {
+      document.getElementById("imageLoader").click();
+    });
+
+    // 削除モード切替ボタンのclick
+    document.getElementById("toggleDeleteModeBtn").addEventListener("click", () => {
+      deleteMode = !deleteMode;
+      document.body.classList.toggle("delete-mode", deleteMode);
+      document.getElementById("toggleDeleteModeBtn").textContent = `削除：${deleteMode ? "ON" : "OFF"}`;
+    });
+
+    // 履歴に追加ボタンのclick
+    document.getElementById("add-history-btn").addEventListener("click", () => {
+      const hex = document.getElementById("hexInput").value;
+      addToHistory(hex);
+    });
+
+    // ファイルのchange
+    document.getElementById('imageLoader').addEventListener('change', function (e) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        loadImageToCanvas(event.target.result);
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    });
+
+    // canvasのclick
+    imageCanvas.addEventListener('click', function (e) {
+      if (!imageLoaded) return;
+      const rect = imageCanvas.getBoundingClientRect();
+      const scaleX = imageCanvas.width / rect.width;
+      const scaleY = imageCanvas.height / rect.height;
+      const x = (e.clientX - rect.left) * scaleX;
+      const y = (e.clientY - rect.top) * scaleY;
+      const pixel = ctx.getImageData(Math.floor(x), Math.floor(y), 1, 1).data;
+      const hex = rgbToHex(pixel[0], pixel[1], pixel[2]);
+      const markerIndex = markers.length;
+      markers.push({ x, y, hex });
+      redrawMarkers();
+      updateFromHex(hex);
+      addToHistory(hex, markerIndex);
+    });
+
+    // 選択位置を表示のchange
+    document.getElementById("toggleMarkers").addEventListener("change", () => {
+      redrawMarkers();
+    });
+
+    // ドラッグ＆ドロップ
+    const dropZone = document.getElementById("dropZone");
+    ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+      dropZone.addEventListener(eventName, e => e.preventDefault(), false);
+    });
+    dropZone.addEventListener("drop", e => {
+      const file = e.dataTransfer.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = e => loadImageToCanvas(e.target.result);
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // クリップボードからの貼り付け
+    document.addEventListener("paste", e => {
+      const items = e.clipboardData.items;
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.type.startsWith("image/")) {
+          const file = item.getAsFile();
+          const reader = new FileReader();
+          reader.onload = e => loadImageToCanvas(e.target.result);
+          reader.readAsDataURL(file);
+          break;
+        }
+      }
+    });
+  </script>
+  <script src="pccsData.js?20250704"></script>
+</body>
+
+</html>

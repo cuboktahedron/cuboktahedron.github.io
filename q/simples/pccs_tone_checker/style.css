@@ -1,0 +1,123 @@
+body {
+  font-family: sans-serif;
+  padding: 1rem;
+  background: #f7f7f7;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #ccc;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+
+#color-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+input[type=file] {
+  display: none;
+}
+
+input[type=color] {
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+.hsl-display,
+.results {
+  margin-top: 0.51rem;
+  background: #eee;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results th,
+.results td {
+  padding: 0.3rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.color-swatch {
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  border: 1px solid #999;
+  margin-right: 0.3rem;
+  border-radius: 4px;
+}
+
+.history {
+  margin-top: 0.5rem;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.history .swatch {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.history .swatch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.history .swatch {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.history .delete-btn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #f33;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+
+body.delete-mode .delete-btn {
+  display: block;
+}
+
+#imageCanvas {
+  cursor: crosshair;
+}
