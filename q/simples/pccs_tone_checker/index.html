@@ -285,7 +285,7 @@
         // 内部サイズは元画像サイズ、CSSはスケーリング用
         imageCanvas.width = img.width;
         imageCanvas.height = img.height;
-        imageCanvas.style.width = "min(100%, 600px)";
+        imageCanvas.style.width = "min(100%, 700px)";
         ctx.drawImage(img, 0, 0);
         baseImageData = ctx.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
         clearHistory();
